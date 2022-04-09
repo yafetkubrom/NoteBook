@@ -1,0 +1,48 @@
+Info about Cassandra
+	- no SQL resilient eventually consistent database
+
+Toturial
+	- CAP theorem (Consistency, Availability, Partitioning)
+		- Cassandra is AP system.
+	- Query First approach
+	- column storing instead of row.
+	- Partition by primary key.
+	- partition key doesn't need to be unique.
+	- primary key -> [Hash Function] -> unique ID (tokens)
+		- BWM -> [HF] -> 4 (store between 1 - 5)
+		- tokens will be 64 bit integers (-2^63 - 2^63)
+	- Nodes are in rings. Between nodes, there are virtual nodes. 
+	
+	- Replicas - across data centers
+	- Racks exist inside data centers
+		- racks are cluster of networked machines. 
+
+Cqlsh
+	- connect to instance running on docker
+		- docker run --name <name> --network <network> -d cassandra:latest 
+		- docker run -it --network <network> --rm cassandra cqlsh <name>
+		- https://hub.docker.com/_/cassandra
+	- connect to instance running on Kubernetes
+		- https://kubernetes.io/docs/tutorials/stateful-application/cassandra/
+	- connect to instance running on local machine
+	- connect to instance running on network
+	- connect to instance running on outside network
+
+	- install on linux
+		- if curl doesn't work
+			- wget -q -O- https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
+
+	- across node communication
+	- across cluster communication
+	- across data_center communication
+	- across racks communication
+
+	- how is data in a node structured in disk (in cassandra)
+
+	- partition key, primary key, cluster id 	
+
+References
+	- https://www.youtube.com/watch?v=yyVbDBSMnUw&list=PLalrWAGybpB-L1PGA-NfFu2uiWHEsdscD&index=9
+	- https://hub.docker.com/_/cassandra
+Approachs (to NoSQL)
+	- https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-general-nosql-design.html

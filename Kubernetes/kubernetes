@@ -1,0 +1,13 @@
+Dockerize
+    Spring
+        mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
+        docker build -t duckduckduce/gs-spring-boot-docker .
+
+
+
+Kubernetes Commands
+
+
+
+Reminders
+    Learn Liquibase for this project

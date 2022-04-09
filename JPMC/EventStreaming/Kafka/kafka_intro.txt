@@ -1,0 +1,5 @@
+Info about Kafka
+	- Event driven app architecture
+
+	- zookeeper
+		- Client Port number : 2181

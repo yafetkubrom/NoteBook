@@ -1,0 +1,17 @@
+Ubuntu IP address
+	- 192.168.1.252
+
+Cassandra
+	- For this reason be sure to stop it if you need to make any configuration changes.
+	---Verify that Cassandra is running by invoking nodetool status from the command line.
+	- The default location of configuration files is /etc/cassandra.
+	- The default location of log and data directories is /var/log/cassandra/ and /var/lib/cassandra.
+	- Start-up options (heap size, etc) can be configured in /etc/default/cassandra.
+
+
+Kafka Port : 9092
+Cassandra Port : 
+
+
+trico @ localhost
+tricomatic @ 192.168.1.247

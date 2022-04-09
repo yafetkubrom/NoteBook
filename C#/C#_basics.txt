@@ -1,0 +1,73 @@
+1. Intro
+	- Run C#
+		using System;
+		namespace HelloWorld
+		{
+  			class Program
+ 			{
+    				static void Main()
+    				{
+      					Console.WriteLine("Hello World");    
+     				}
+  			}
+		}
+
+		- Console.ReadLine()
+		- // comments	/* comment block */
+
+2. Data Types and Variables 
+	- int - whole numbers (int = 4, long = 8)
+	- double - decimal (float = 4, double = 8)
+	- char - single character
+	- string - string of characters
+	- bool - true(0) or false(1)
+	- DateTime - moment in time
+	- Data type conversion
+		- implicit conversion - happens automatically (ex. int to double)
+		- explicit conversion - require cast operator (ex. Double to int will lose data) 
+		- cast operator - int x = (int)b;	// or Convert.ToX() method
+
+3. Working with numbers
+	- ++ -- += -= /= *=
+	- build-in methods 
+		- Math.Abs() finds absolute value
+		- Math.Sqrt() returns square root of num;
+		- Math.Floor() rounds double down to nearest whole (Math.Ceiling())
+		- Math.Min() returns smaller of two numbers
+		- Math.Pow(a,b) raises a to the power b
+		- https://docs.microsoft.com/en-us/dotnet/api/ for extra info
+4. Working with Text
+	- string line = " she said \"hi\"";	// escape \ for qoute
+	- string concatenation = "hello" + name;
+	- string interpolation = $"hello {name}";
+	- string methods
+		- string.Length
+		- string.IndexOf(a); returns index of a in string, -1 if not exist.
+		- string.SubString(alb); return string from index a forward or until b if b exist.
+		- bracket notation [] ex. string[5] returns char of string in index 5.
+		- string.ToUpper(), ToLower all cap or all lower
+
+
+6. Method
+	- static void MethodName()	// use PascalCase for method name. not camelCase.
+	{
+	}
+	- MethodName(); to run it
+	- Optional parameters
+		- static void MethodName(string msg, string punc = ".")
+			- default punc to be used if non specified. 
+	- Named arguments
+		- static void MethodName(int a=0, int b=0) // putting one number updates a but if you want to update b, MethodName(b: 3);
+	- Method overloading
+		- same method name with different parameter type or different number of parameters
+	- 'out' lets you return two types.
+		- bool success = Int32.TryParse(string s, out int result); 
+		- if true, success = true and result = parsed string
+		- if false, success = false and result = null
+		
+		- static string Yell(string phrase, out bool wasYellCalled)
+		{
+  			wasYellCalled = true;
+  			return phrase.ToUpper();
+		}
+		

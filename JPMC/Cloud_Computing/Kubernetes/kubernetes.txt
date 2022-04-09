@@ -1,0 +1,82 @@
+Info about Kubernetes 
+	- As numbers of containers grow in size, one can't just use command line to keep track.
+	- Kubernetes solves this problem.
+
+	- Kubernetes - container-orchestration system.
+
+	- Structure
+	- Cluster -> Node -> 
+		- Pods (includes ports and cluster IP)
+			- Platform Service Container
+			- Command Service Container
+			- Ingress Nginx Container 
+			- Platform SQL Server Container
+			- RabbitMQ Container
+			
+		- Other services
+			- Node port (external port (3xxxx) and internal port)
+			- Ingress Nginx Load Balancer 
+			- Persistent Volume Claim (domain of DevOps) 
+
+	- Approaches
+		- Imperative - Command Line
+		- Declarative - Config File
+	- Storage
+		- 1. Persistent Volume Claim
+		- 2. Persistent Volume
+		- 3. Storage Class
+
+	- Commands
+		- kubectl version
+		- kubectl apply -f platforms-depl.yaml
+		- kubectl get deployments
+		- kubectl get pods
+		- kubectl get services
+		- if you delete a deployment, kube will replace it.
+		- to permanently delete pod
+			- kubectl delete deployment platforms-depl
+		- permanently delete service
+			- kubectl delete svc <serviceName>
+		- force it to pull down latest docker
+			- kubectl rollout restart deployment <depl-file>
+		- list namespaces
+			- kubectl get namespace
+			- kubectl get pods --namespace=<namespace name>
+		- list storages
+			- kubectl get storageclass
+			- kubectl get pvc
+		- user (secrets)
+			- kubectl create secret generic mariadb1 --from-literal=KEY="VALUE"
+		- kubectl create secret generic mariadb-user-credentials 
+			--from-literal='MYSQL_ROOT_PASSWORD=Genesis91' 
+			--from-literal='user_1=springuser1_dev' 
+			--from-literal='password_1=development'
+		- kubectl run -it --rm --image=mariadb:latest --restart=Never mariadb-client -- mariadb -h mariadb-loadbalancer -pGenesis91
+
+
+What is Kubernetes
+	- it is a system for orchestrating containers.
+What are containers?
+	- containers are a process in the Operating System that are isolated from other processes. 
+- The hierarchy for this is as follows:
+
+		- A NODE refers to a computer system running an instance of Cassandra. A node can be a physical host, a machine instance in the cloud, or even a Docker container.
+A rack refers to a set of Cassandra nodes near one another. 
+		- A RACK can be a physical rack containing nodes connected to a common network switch. In cloud deployments, however, a rack often refers to a collection of machine instances running in the same availability zone.
+		- A DATA CENTER refers to a collection of logical racks, generally residing in the same building and connected by a reliable network. In cloud deployments, data centers generally map to a cloud region.
+		- A CLUSTER refers to a collection of data centers that support the same application. Cassandra clusters can run in a single cloud environment or physical data center, or be distributed across multiple locations for greater resiliency and reduced latency
+
+What are services?
+What are pods?
+
+DB
+	Deploying DB in Kubernetes
+		- https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/
+	Credential secrets in db
+		- https://kubernetes.io/docs/concepts/configuration/secret/
+		- https://cloud.netapp.com/blog/kubernetes-shared-storage-the-basics-and-a-quick-tutorial
+	Issus
+		- Cant connect to two servers running locally with same port
+			- https://dev.mysql.com/doc/refman/8.0/en/can-not-connect-to-server.html
+			- https://stackoverflow.com/questions/16325607/cant-connect-to-local-mysql-server-through-socket-tmp-mysql-sock
+https://goteleport.com/blog/microservices-containers-kubernetes/

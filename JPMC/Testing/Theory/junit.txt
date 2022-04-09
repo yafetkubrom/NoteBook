@@ -1,0 +1,6 @@
+Info about JUnit (Unit) testing
+	- understand all testing to picture the context of unit testing.
+
+
+Reference
+	- Check SpringbootFrameworkGuru video 34(spring MVC @RequestBody Annotation) on timestamp 0.52

@@ -1,0 +1,27 @@
+Installation
+    reference - https://mac.install.guide/homebrew/3.html
+    reference - https://brew.sh/
+
+Commands
+    brew doctor - run diagnostics 
+    brew list - list all packages you installed
+    brew deps --tree --installed - list of packes along with their dependencies.
+
+    brew search <package>
+    brew info <package>
+    brew install <package>
+
+    brew update - update homebrew itself
+    brew doctory - run diagnostics
+    brew upgrade - update packages
+    brew upgrade <package> - update specific package
+
+    xcode-select -p - check if command line tools are installed.
+
+    uninstall
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+    sudo rm -rf /opt/homebrew/
+
+Location
+    homebrew - at /usr/local/bin and automatically added to $PATH
+    packages - /usr/local/opt/

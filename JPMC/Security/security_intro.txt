@@ -1,0 +1,5 @@
+Spring Cloud 
+    - Spring Cloud Config gives you the ability to encrypt sensitive properties. 
+    - Spring Cloud Config supports both symmetric (shared secret) and asymmetric (private/public key) encryption.
+        - asymmetric encryption is more secure. becuase it used more modern and more complex algorithms.
+        - symmetric is more convienent because we only need to define a single property. 

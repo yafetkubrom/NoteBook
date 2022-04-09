@@ -1,0 +1,39 @@
+credentials
+    root password : G9
+    port : 3306
+
+Installation
+	- https://linuxize.com/post/how-to-install-mariadb-on-debian-9/
+	- It is always recommended to install package from Debian Repository
+	- After installation, run the 'sudo mysql_secure_installation' script for security
+
+commands
+    Login 
+        mysql -h host -u user -p mydb
+        mysql -u root -p
+    database
+        DROP DATABASE IF EXISTS db_name;
+        CREATE DATABASE db_name;      
+    table
+        DROP TABLE IF EXISTS table_name;
+        CREATE TABLE table_name (a int); 
+    user
+        CREATE OR REPLACE USER 'foo2'@'test' IDENTIFIED BY 'password';
+        GRANT ALL PRIVILEGES ON *.* TO 'user1'@localhost IDENTIFIED BY 'password1';
+        GRANT ALL PRIVILEGES ON 'yourDB'.* TO 'user1'@localhost;
+        FLUSH PRIVILEGES;
+        SELECT User FROM mysql.user;
+        SHOW GRANTS FOR 'user1'@localhost;
+    script
+	source \home\user\Desktop\test.sql;
+Reference
+    mysql & Spring - https://spring.io/guides/gs/accessing-data-mysql/
+    - https://linuxize.com/post/how-to-manage-mysql-databases-and-users-from-the-command-line/
+
+brew
+    brew install MariaDB
+    brew services restart mariadb
+    brew services start mariadb
+    brew services stop mariadb
+    brew services enable mariadb
+    brew upgrade mariadb

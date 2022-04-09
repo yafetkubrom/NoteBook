@@ -1,0 +1,28 @@
+- Check if your ubuntu system meets the requirements
+- uninstall old versions
+- 3 ways to install
+	- install using the repository (recommended)
+	- install from a package (manuelly)
+	- scripts (easiest for test & development env) (automated but less control over installation)
+- Downloaded using option 1
+	- sudo apt-get install docker-ce docker-ce-cli containered.io
+	- 451 MB
+- too upgrade docker engine
+	- first run sudo apt-get update
+	- apt-cache madison docker-ce // see available versions and install latest
+	- sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io
+	- sudo docker run hello-world  // to verify the version
+- info
+	- by default, only root has privilage and other users must use sudo
+	- to change that, add users to docker group
+		- https://docs.docker.com/engine/install/linux-postinstall/
+
+- REFERENCE 
+	- https://docs.docker.com/engine/install/ubuntu/
+	
+	
+Stopped at https://docs.docker.com/get-started/04_sharing_app/
+and https://docs.docker.com/engine/examples/postgresql_service/
+
+cd 
+/home/yafetkubrom/Documents/Docker/Get_Started/ExampleRepo/getting-started/app

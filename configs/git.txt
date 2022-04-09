@@ -1,0 +1,35 @@
+Convert existing non-empty directory into a Git working directory
+	git init 
+	git add .
+	git commit -m 'initializing'
+	(create project in Github)
+	git remote add origin <url> (link remote repo with local repo)
+	git push -u origin main (push all changes to github)
+
+git config
+	git config --global username	// & email
+
+Git quick reference
+	git status
+	git log 
+	git branch -d <branch-name>	// delete branch
+	git diff <branch-name> <branch-name>
+	git rm --cached path/to/file	// --cached remove file from remote but not local
+
+SSH generation
+	ssh-keygen -t ed25519 -C "your_email@example.com"
+	eval "$(ssh-agent -s)"	// start the agent
+		if using macOS 10.12 or later, edit ~/.ssh/config
+			nano ~/.ssh/config
+			"""
+				Host *
+  				AddKeysToAgent yes
+  				UseKeychain yes
+  				IdentityFile ~/.ssh/id_ed25519
+			"""
+	ssh-add -K ~/.ssh/id_ed25519
+	pbcopy < ~/.ssh/id_ed25519.pub	// mac
+		linux > cat ~/.ssh/id_ed25519.pub
+
+reference 
+	https://www.atlassian.com/git/tutorials/what-is-version-control

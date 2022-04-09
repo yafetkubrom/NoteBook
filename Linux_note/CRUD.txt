@@ -1,0 +1,202 @@
+CRUD - Create, Read, Update, Delete
+Video - 
+	SQLite 3
+		- Every database system is different
+		- Standards compliant
+		- widely deployed
+		- single file, cross platform
+
+Standard SQL 	- sqlitestudio.pl
+	 	- also need text editor
+
+	- SELECT * FROM countries where Continent = 'Europe';
+	- Select statement
+	- FROM is clause (to specify which table to use)
+	- ; terminates this statement but is not required.
+	- where clause (specify which rows are displayed)required logical expression
+SELECT
+	- Read	
+	- SELECT * FROM Customer;
+	- In standard SQL, select is used for all query that return values. 
+	- Often the most common
+INSERT	
+	- Create row
+	- To add row into the table.
+	- INSERT INTO Customer(name, city, state) 
+		VALUES ('Jimi Hendrix', 'Rento','WA');
+UPDATE	
+	- update
+	- change data
+	- UPDATE Customer SET Address = '123 Music Avenue',
+		Zip = '98056' WHERE id = 5;
+DELETE
+	- delete
+	- remove data
+	- DELETE FROM Customer WHERE id = 4;
+
+CREATE TABLE (IF NOT EXISTS) NAME ( column datatype constaraint default default_value,
+	- Datatypes 
+		-INTEGER, BOOLEAN (NUMBER OR 0,1)
+		-FLOAT,DOUBLE,REAL (FOR PRECISE)
+		-CHARACTER,VARCHAR,TEXT
+		-DATE,DATETIME
+		-BLOB(RARE)
+	- Constraints
+		-PRIMARY KEY
+		-AUTOINCREMENT
+		-UNIQUE(COLUMNS)
+		-NOT NULL
+		-CHECK(expression)
+		-FOREIGN KEY	
+
+ALTER TABLE [name] add column datatype constraint
+	- ALTER TABLE [NAME] RENAME TO [NEW NAME]
+	- ALTER TABLE [NAME] DROP [COLUMN]
+
+DROP TABLE [IF EXISTS] (NAME)
+ 	 
+
+
+row(record) and columb(field)
+primary key with column
+
+where a is NULL (dont do where a=NULL)
+
+Schema - db schema is what describes the structure of each table
+
+***********TO PRINT**************************
+SELECT * AS "all" FROM Country WHERE Continent = 'AFRICA';
+	- * is all columns. 
+	- FROM clause (specify which table to use)
+	- WHERE clause (specify which row) (require logical expression)
+	- AS clause (specify alias when reporting back)
+	- LIMIT 5 will display only 5 (limit to 5 query)
+	- LIMIT 5 OFFSET 10 (must come last)
+	- COUNT(*) will return count of all rows
+
+INSERT INTO customer () VALUES ()
+
+UPDATE customer set address = '' where id=4; 
+
+DELETE FROM customer where id = 4;
+
+CREATE TABLE name (colname type NOT NULL, colname type primary key,..);	// column info between the brackets are called schema.
+DROP TABLE if exists name;
+
+INSERT INTO name (a,b,c) select id,name,descri from item;
+
+ALTER TABLE test ADD d TEXT;	// add
+**************************************************
+
+- create table name(columname type default 'panda') // will give default to col name
+- schema - the way the columns are set up.
+- WHERE name LIKE '%island%' - means all where name start or end with word island
+			- remove % from one side of only ending or starting.
+- WHERE name LIKE '_a%'  - all names where second letter is a.
+- WHERE continent IN ('Europe', 'Africa');   - list from both
+
+- SELECT DISTINCT NAME from test;   // will not diplicate
+- SELECT DISTINCT NAME, FAMILYNAME from test;  // where name and family_name are distict
+- SELECT name, continent, region FROM country order by continent, region, name;   // within continent 
+by
+
+Conditional Expressions
+	- SELECT 
+		CASE WHEN a THEN 'true' ELSE 'false' END as boolA,
+		CASE WHEN b THEN 'false'ELSE 'false' END as boolB
+		FROM table1;
+	or
+		CASE a WHEN 1 THEN 'true' ELSE 'false' END AS boolA,
+		CASE b WHEN 1 THEN 'true' ELSE 'false' END AS boolB
+
+
+Understanding JOIN
+	- union of column from table one and table two 
+	- SELECT l.name as left, r.name as right
+		FROM left as l JOIN right as r
+		ON l.id = r.id
+	;
+	- LEFT JOIN will display all left and matching right
+
+Relating multiple tables
+	- many to many
+	- SELECT c.name AS Cust, c.zip, i.name AS Item, i.description, s.quantity AS Quan, s.price AS Price
+  		FROM sale AS s
+  		JOIN item AS i ON s.item_id = i.id
+  		JOIN customer AS c ON s.customer_id = c.id
+  		ORDER BY Cust, Item
+	;
+*** IN sql, 0 is false and 1 is true.
+STRING
+	- 'hello' in standard. "Hello" in mySQL
+	- 'Here''s' to print '
+	- 'hello' || 'world' in standard and CONCAT('Hello','world') in mySQL
+	- standard fxns
+		- SUBSTR(string, start, length)
+			- SELECT released, substr(released, 1, 4) from album; // meaning substring
+		- LENGTH(string)
+			- SELECT name, length(name) as len from city order by len desc, name;
+		- TRIM(string) LTRIM left only, RTRIM right only
+			- select trim('..hi..','.') //remove all dots (can also rtrim and ltrim)
+		- UPPER(string) - all upper case
+		- LOWER(string) - all lower case // can also compare two similar strings that differ with case sensitive.
+				- folding - is comparing two string by wrapping them up in lower or upper case fxn.
+
+INTEGER
+	- TYPEOF function 
+	- CAST AS REAL
+	- round
+DATES
+	- Standard 2020-01-15 15:32:08
+	- DATETIME('now');	//timestamp
+	- DATE, TIME
+
+AGGREGATES
+	- Aggregate expressions take parameter and returns one value
+	- SELECT COUNT(), AVG(), MIN(), MAX(), SUM().
+		- group by
+		- having k=" "(works like where)
+Transactions
+	- group of operations handled as one operation. if one fail, all fail.
+	- BEGIN TRANSACTION;
+		........
+	- END TRANSACTION;
+	- Transaction are faster than indivitual operations.
+TRIGGERS
+	- triggers are operations that are automatically triggered when an DB event happen.
+	- use NEW for uncreated event
+SUBSLECET
+	- nested select to use information from select toward another select
+	
+
+************from codecademy*******
+case
+	- select name, 
+		case
+		when genre = 'romance' then 'Chill'
+		when genre = 'comedy' then 'Chill'
+		else 'Intense'
+		end
+		from movies;
+with
+	- with previous_query as (
+		select customer_id, count(subscription_id)
+  			as 'subscriptions'
+  			from orders
+ 			group by customer_id
+		)
+		select customers.customer_name, previous_query.subscriptions
+		from previous_query
+		join customers
+		on previous_query.customer_id = 
+		customers.customer_id;
+
+- Query Order of execution
+	1. FROM and JOINs
+	2. WHERE
+	3. GROUP BY
+	4. HAVING
+	5. SELECT
+	6. DISTINCT
+	7. ORDER BY
+	8. LIMIT/OFFSET

@@ -1,0 +1,143 @@
+﻿Boot
+	- In computing, booting is the process of starting a computer.
+	- It can be initiated by hardware such as a button press, or by a software command.
+	- After it is switched on, a computer's central processing unit has no software in 
+		its main memory, so some process must load software into memory before it can
+		execute.
+	- boot is short for bootstrap as in "to pull oneself up by one's bootstrap"
+		- meaning a smaller simpler program loads and execute the larger complicated ones.
+	
+- Linux startup process is multi-staged initialization process performed during booting a Linux installation.
+	- examples of the stages are boot loader phase(ex. grub), kernel phase, init
+
+- simplified startup
+	1 - System powers up. Bios does minimal hardware initialization then hand control to boot loader
+	2 - Boot loader calls the kernel
+	3 - Kernel loads Ram disk that load system drives then look fo root file system
+	4 - Once kernel is set up, it begins the systemd initialization system
+	5 - systemd takes control and continues to mount the host's file systems and start service. 
+- Another simplified
+	kernel -> systemd -> getty -> login -> bash
+	- systemd - invoked at end of startup procedure
+			- responsible for starting up and shutting down the sys.
+	- getty - created by init process, manage terminal type (tty)
+	- login - process that authenticated the user. shell is created. 
+
+Installation
+	Options:
+	  1) download Linux into usb drive and access from usb
+	  2) download Linux into usb drive and install to hardware
+		- Partition?? (must create swap which is space in hard drive)
+		- efi?? boot loader??
+	  3) download Virtual box and create virtual environment to install Linux
+
+	Partition:
+	  - /dev/sda1 ntfs should be windows 
+	  	- Windows10 should be partitioned by itself(/dev/sda1 or 2
+	  - use the free space for ubuntu
+		- shrink windows but live space since window have big files
+	  - must create swap 
+		- + on free space and add about double of your memory for swap
+	  - Primary vs Logical partition
+		- Primary Partition holds OS files and you can boot from it. 
+			- max 4 primary can be created
+		- Logical partition holds files/images/videos. 
+	  - File Systems (fat32, ext4, swap,)???
+	  - Device for boot loader - if booting from efi, use that. 
+		if not, leave it at dev/sda. the window boot loader will be replaced by 
+		GRUP and it will give you option to choose between window and linux every 
+		time you power on. 
+
+bootable
+	- Grup is booting manager for Ubuntu.
+		- ???
+
+commands
+	Open file 
+		- xdg-open filename (from linux)
+		- open filename (from mac)
+
+	ls	ls -l 	-long list with permission statues
+		ls -r 	-list in reverse order
+		ls -s 	-list with size info
+		l     	-list
+		ls --help 
+
+	!!      Do the previous command
+
+	error with permission
+		- sudo nano filename
+		or 
+		- sudo su 
+		- do your thang
+		 - sudo yafet (when done)
+
+	using apt-get
+		- sudo apt-get install xxxx
+		- sudo apt-get remove xxxx
+		- to install program that you dont know name
+	   		- apt-cache search bluefish*
+		- to see if you have it installed
+	  	 	- apt-cache policy bluefish
+		- if you download deb file from browser
+	   		- sudo dpkg -i ./filename.deb
+
+permission	- ls -l
+		- drwxr-xr-x (you-group-public)
+			- example : create file thru nano then check its permission.
+					if you wanna change it:
+					- sudo chown user:group filename (chang ownership) 
+					- user - who owns it. group - to share with
+					- sudo chmod 664 filename(6 rw and 4 is r)
+			- if you sudo mkdir, it belongs to root. if mkdir, it belong to u. 
+		- to chown directory, same. chown -R if u want chown every file in the dir
+				-R for recursive
+creating file
+		- rm dir/*   	// to remove all content inside dir but leave dir.
+		- rm -rf	// delete dir even if not empty. use rmdir if empty.
+ 		- cp file /location/name	// copy file into the location and give name. 
+		- mv filename newfilename	// move does not leave copy.
+
+
+Find	- find . -type f -name "name" 	// . is current dir. or /dir for another dir
+					// -type is by type, -size look by size							// name = *.php or name of file, iname = ignor cap
+					// f = file , d = directory
+	- find . -type f -perm 0644	// permission
+	- find . -size -1M 		// size under 1M byte
+	- find . -type f -not -iname "name"
+	- find . -maxdepth 1 -type f -iname "*.conf"  // look only 1 layer of folder. 
+	- find . -type f -size -10k -iname "*.php" // both types
+
+
+Find (within a file
+	- grep "using" hello.cpp	 
+	- grep -i "using" hello.cpp	//ignore case
+	- grep -n "using" hello.cpp	// line number where it occur
+	- find .... -exec grep ... {} +
+
+
+redirect output to file
+	- ls > outfile.txt
+	- ls | tee outfile.txt // brint in screen and to file
+
+Hardware: (HP desktop components and maker)
+	- AMD 		- graphics, chipset and processors
+	- Creative 	- Sound Cards
+	- Intel		- Desktop boards, processors, memory, & storage
+	- Microsoft	- Windows, Microsoft software, Hardware drivers
+	- NVIDIA	- GPU's
+	- SanDisk	- Disk drives
+	- SiS		- Chipsets & onboard devices
+	- VIA		- Chipsets & embedded boards & systems 
+	
+
+
+c++
+	- sudo apt-get install g++    (compiler)
+	- sudo apt-get install geany (editor)
+	- compile - build - run
+	- compile - g++ -c code.cpp and it produces file named code.o
+	- build - g++ -o code code.cpp and it produces file named code 
+	- run - ./code
+
+wifi product(on my window desktop) - RT3090 wireless 802.11n 1t/1r PCIe

@@ -1,0 +1,134 @@
+AWS Developer Associate
+
+AWS History
+	2002 internally launched
+	2004 SQS
+	2005 EC2, S3
+	2007 Europe
+
+AWS Regions - cluster of data centers. Ex. us-east-1
+	How to choose Region. Complience, Proximity, Service Availability, Price
+AWS AZ - one or more discrete data centers, connected w/ high bandwidth. ex. us-east-1a, us-east-1b.
+AWS Data Centers -
+AWS Edge Locations / Points of Presence - presence of aws in countries
+
+
+IAM
+	Overview 
+		Identity & Access Management
+		Global Service
+		Users & Groups
+	IAM Policies
+		set of permission in JSON docs
+	IAM MFA
+		Multi Factor Authentiction
+		MFA = password you know + device you own
+		MFA devices 	- Virtual MFA devices, 
+				- Universal 2nd factor (hardware)
+				- hardware key fob MFA (regular and gov version)
+
+	IAM AWS Access Keys
+		3 ways to access AWS services
+			1. AWS management console (protected by password & MFA)
+			2. AWS CLI (protected by access keys)
+			3. AWS SDK (protected by access keys)
+		AWS Access keys generated thru console
+		Access key ID ~= username
+		Secret Access Key ~= password
+		* AWS CLI - direct access to public APIs of AWS services
+		* AWS SDK - Language Specific - embedded into your application
+		* ex. AWS CLI is created using python AWS SDK
+
+	AWS CloudShell
+		alternative to CLI. CLI on aws site
+		doesnt need to be configured
+		by default, uses the region you logged in to. 
+		data saved are persistance
+	IAM Roles for Services
+		Some services will need to perform task on your behalf
+		IAM Roles - access management for services
+	IAM Security Tools
+		IAM Credentials Report (account-level)
+		IAM Access Advisor (User-level)
+
+EC2 Foundamentals
+	Overview
+		Elastic Compute Cloud
+		Elastic - easily created, launched, deleted, or scaled.
+		IaaS (Infrastructure as a Service)
+	Budget Setup
+		view bill
+		set up budge 
+	EC2 Basics
+		allows you to rent VMs, store data (EBS), ELB, ASG
+		config: OS, CPU, RAM, EBS (storage), Network Card, 
+			Firewall (security groups), Bootstrap Script (EC2 User Data)
+		config: AMI, 
+	EC2 Types
+		https://aws.amazon.com/ec2/instance-types
+		For Exam, know the types and benefits
+		m5.2xlarge	// m = instance class, 5 = generation, 2xlarge = size within class
+		instances.vantage.sh	// overview of all sizes
+	Security Groups
+		Could attach to multiple instances
+		attached to regions/VPC combination
+		lives outside the EC2
+		maintain one separate security group for ssh (developer to developer tips)
+		ELB : instance with security group 1 could communicate with 
+			another instance which references that security group.
+		classical ports, 22, 21, 22(sftp), 80, 443
+	SSH
+		ssh, putty, ec2 instance connect (browser, only linux 2)
+			* instance connect still use ssh
+		ssh -i .pem ec2-user@ip	// first chmod 0400 .pem
+	EC2 - IAM Roles
+		- Do not ever enter IAM info into ec2. instead attach a role to ec2 to access IAM. 
+	On Exam
+		Ec2 instance launch types. which option is best for this <task> based on the launch options.
+		options. on-demand, Reserved, Spot instance (bid), & dedicated hosts
+
+	EC2 components
+		EBS - Elastic Block Store
+			- network drive
+			- could persist even after instance's termination
+			- bound to AZ
+			- 1 EBS per one instance (CCP level) 
+			- By Default, root EBS is set "delete on termination" but other EBS are not.
+			- attach an instance > https://devopscube.com/mount-ebs-volume-ec2-instance/
+			- EBS Snapshot (Backup)
+		EBS types
+			- differ in size, throughput, IOPS
+		AMI - Amazon Machine Image
+			- customization of EC2 instance (software, config, OS, monitoring)
+			- Launch instance from public AMI, your own AMI, AWS Marketplace AMI (made by others)
+		EC2 Instance Store
+			- volume is attached to ec2 hardware.
+			- faster IOPS 
+			- Not reliable. could be lost.
+			- ex. for cache 
+		EFS
+			- Elastic File system
+			- could be attached to multiple instances and change to content is reflected across all.
+			- more expensive.
+			- pay by use. dont have to provision size ahead of time. 
+			- efs mount helper > sudo yum install -y amazon-efs-utils
+	ELB & ASG
+		- Intro
+			- Vertical vs Horzontil scaling
+			- High Availability
+		- ELB
+			- Elastic Load Balancer
+			- Health Check
+			- 4 types: CLB, ALB, NLB, GLB(latest)
+				- ALB - specify target group 
+				- NLB - static IP (instead of hostname)
+
+CLI Commands
+	aws configure
+	aws iam list-users 
+
+Exxtra
+	EC2
+		EC2's base operating system is believed to be based on customized version of 
+			Red Hat Enterprise Linux (RHEL).
+		On top of that, for the Virtual Machine, AWS uses Xen Hypervisor.

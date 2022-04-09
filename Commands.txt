@@ -1,0 +1,17 @@
+IntelliJ
+	- Launch IntelliJ from Command Line --- open -na "IntelliJ IDEA.app" .
+
+Linux/unix
+	- List files in sub-directories as well 	--- ls -R
+	- List hidden files as well 		--- ls -a
+	- List files and directories with info 	--- ls -al
+
+	- Check disk info			--- df -h
+	- disk usage in folder			--- du -sh *
+	
+	
+	- kernel version				---  uname -r
+
+	- hard disk location			--- /dev
+	- volumes				--- /vol
+

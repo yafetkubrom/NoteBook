@@ -1,0 +1,31 @@
+dotnet is installed at /usr/local/share/dotnet and it includes the .net sdk, .net runtime and asp.net core runtime
+
+
+- Controller should be different for all resources. Don't have one controller for whole project.
+
+- Entity Framework
+	- microsoft.entityframeworkcore
+	- microsoft.entityframeworkcore.design
+	- microsoft.entityframeworkcore.sqlserver (for other DB, change the name )
+		- for mysql, they have entity support. get link from nuget.org
+- encrypt connection string to hide password (kinda difficult to do)
+- When migrating to mysql database, i received error with Create method. 
+	the reason was that mysql entity framework support works with older version of ef
+	Instead, use an alternative support found on nuget.
+	- NEW UPDATE the alternative support was Pomelo but must download the latest version. 
+
+
+view all .net templates
+	- dotnet new
+pick a template
+	- dotnet new <template> -n <name>
+build
+	- dotnet build
+run
+	- dotnet run
+
+
+
+Saved State
+	- https://docs.docker.com/engine/install/
+	- https://docs.docker.com/engine/install/ubuntu/

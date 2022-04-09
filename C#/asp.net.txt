@@ -1,0 +1,9 @@
+asp.net
+
+Connecting to db in SQL Server
+	- https://docs.microsoft.com/en-us/sql/relational-databases/lesson-1-connecting-to-the-database-engine?view=sql-server-ver15
+
+- Why you shouldnt use microsoft access for web application?
+https://docs.microsoft.com/en-us/previous-versions/aspnet/ms178359(v=vs.110)
+how to make a project into a solution for vs code
+	https://stackoverflow.com/questions/17693058/sln-file-lost-then-how-to-run-a-project-which-has-a-database-connection

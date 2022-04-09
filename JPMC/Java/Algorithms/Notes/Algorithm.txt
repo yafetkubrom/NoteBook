@@ -1,0 +1,28 @@
+Algorithms 
+    - process or set of rules required to perform calculation or problem-solving operation.
+    - carried in specific order to perform the task.
+    - Not the whole program, just the logic
+    - could be described using flowchart or pseudocode.
+    - characters
+        - input, output, unambiguity, language independent
+    - parts
+        - Theorical - must know theorical aspect of the problem
+        - Practical - must be able to implement it into practical.
+    - Approaches 
+        - Brute Force Algorithms
+        - Divide and Conquer
+        - Greedy Method
+        - Dynamic Programming
+        - Branch and Bound 
+        - Randomized
+        - Backtracking
+    - catogories
+        - sort, search, delete, insert, update
+    - Complexity
+        - Time Complexity
+    - Types
+        - Search Algorithms (Linear and Binary)
+        - Sort Algorithms
+
+reference - https://www.javatpoint.com/data-structure-algorithm
+lookup - https://www.udemy.com/course/data-structures-and-algorithms-deep-dive-using-java/

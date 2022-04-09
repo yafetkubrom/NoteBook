@@ -1,0 +1,97 @@
+1 What is hugo
+    - hugo is a static website engine written in Go.
+        - Dynamically built pages are created with every request.
+        - Hugo builds only when you create or update content.
+    - Websites build with hugo are fast and secure. 
+        - no need for database or dependencies or expensive runtimes. 
+
+2 What do you need to make it work
+    - go (required) (install at https://golang.org/doc/install)
+        - if installed hugo with package manager, it handles go installation
+    - Node
+        - for javascripts
+    - works on all popular platforms (MacOS, Linux, Windows, openBSD, freeBSD)
+
+3 What are good tutorial to watch to learn
+    - https://levelup.gitconnected.com/a-quick-tutorial-on-hugo-templates-creating-your-theme-a4102b42a85f
+    - 
+
+4 Where can I go to ask questions
+    - https://gohugo.io/troubleshooting/
+    - https://discourse.gohugo.io
+
+5 documentation 
+    - https://gohugo.io/
+
+
+Commands 
+    hugo new site <site-name>
+        new module
+
+    hugo new <content-name>/<content.md>
+        new content
+        content-name will be used as type if type is not specified
+
+    hugo new theme <theme_name>
+        creates new theme
+        - theme = "theme_name" in config.toml -- adds theme to project. 
+
+    hugo 
+        generates your website in public/ folder
+
+
+Terms
+    Front Matter
+        - It allows you to keep metadata attached to an instance of a content type
+        - toml, yaml, json 
+    Page Bundles
+        - A way to group page resources
+        - leaf bundle - no children - content/posts/my-post/index.md
+        - branch bundle - has children like homepage, sections.. - content/posts/_index.md
+    Content Formats
+        - HTML and Markdown
+        - .html files are stored in layouts folder
+        - .css, js stored in static folder (assets)
+    layouts
+        - baseof.html - shell from which all pages will render
+            - pulls content from partials (head, header, footer .html)
+            - pulls content from main block (other html file with {{define "main"}})
+        - list.html
+            - template used to render multiple pieces of content in single html.
+        - Home Page layout > Home Page (layouts/index.html)
+        - Single Page template > Product Page, Another Product Page, About Page (layouts/_default/single.html)
+        - List Layout > Product list (layouts/_default/list.html)
+    content
+        - The content folder structure and organisation reflects how the site is rendered. 
+            Its subfolders give the page path, determine content Type, and therefore the layout being used.
+        - Homepage should be at root of content and named _index.md. and pull layout at layouts/index.html
+            - content/_index
+
+    .Site
+        - tells hugo to get values from site's data instead of page's data.
+        - Context(.)
+            - Site.
+                - Title (site's title)
+            - Title (page's title)
+            - Content
+    Themes
+        - A way of organizing the layouts (solve the problem of redundent html code)
+        - Could create your own or download one from market
+    Structure
+        - {{- partial "head.html" . -}}
+            - the dash (-) suppresses whitespace characters in the ouput. 
+            - the dot (.) means the current context. partial takes filename and context for the data.
+    Shortcomings
+        - since you are not working with collections in single layouts, you wont have access to .Pages variable. 
+            - you can use where clause with .Site.RegularPages "Type" "in" "<name of content>"
+            - range (where .Site.RegularPages "Type" "in" "projects").ByDate.Reverse
+            - range first 1 (where .Site.RegularPages "Type" "in" "projects").ByDate.Reverse
+
+Labs
+    create new site and add to git
+    create new content to site manually
+    create new content to site using new
+    create theme in current folder
+    create theme using new and port changes from current folder
+    update the css with minor changes
+    use css bootstrap

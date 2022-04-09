@@ -1,0 +1,82 @@
+What is a linux
+	- Your computer, despite being a collection of highly sophisticated parts, is really just...well, 
+	a collection of highly sophisticated parts. On its own, it can do nothing other than switch on and off and spin a disk. 
+	In order for it to do something meaningful, it needs an operating system (OS). Mac, DOS and window are example of such. 
+	Linux is yet another. But it differes in that it was not created by a corporation or someone to make money but by Linus Torvalds who created a 
+	system like Unix that would work on home computers and decided to share it openly. 
+
+- Although you can use Linux by itself by typing commands on black screen, it has GUI throught the graphical desktop environment or GNOME. 
+- what is a distribution
+	- An operating system consists of a lot of files that perform a lof of different functions. 
+	Since there is no Linux corporation to pachage and distribute the files, variety of groups of entities create Linux system and application 
+	collections called Distributions (Distros). All distros basically consist the core OS(Linux Kernel), 
+	some sort of installer program to get all Parts and Applications, the X Window System for graphical interface support, 
+	one or more grapical desktop envirnment and series of applications such as audio players and word processors to make things work. 
+
+Terminal	
+	- ykubrom@ubuntu:~$
+	- ykubrom is the username
+	- ubuntu is name you give your computer
+	- ~ (tilde) signifies that I am in my home folder. 
+Bash (Shell)
+
+	- Bash(Bourne Again Shell) is one of the many shells that are used in linux systems and it is the one that comes with ubuntu distro. 
+	- Shell is a program that interprets the commands you type into the Terminal and delivers them to your system. 
+	Think about it as a commands handling subsystem for which Terminal is its graphical front end. 
+	Some scripting languages have their own shells. (you have scripting language and shell is what interprets it. )
+
+Try finger
+
+easy commands
+	- ls -R
+		- list folders and subfolders
+	- cd - 
+		- go to previous location 
+	- sudo apt install(remove) appName
+
+commands
+
+	- df -h 
+		- disk file system. how much disk space and how much still available.
+	- ls  
+		-R  -includes subFolders
+		-a  -includes invisible files	
+	- rmdir
+		- rmdir folder/sub   - to delete subfolder without deleting main folder
+	- chmod
+		- change mode
+		- chmod 744 ~/photos/personal
+		- 744 (first number=owner permission, second=group permission, third=others
+		- 0 no perm 1- executes 2&3- write  4-7-read  
+	- locate
+		- search for a file
+		- first -- (sudo updatedb) then use locate
+		- locate filename.txt (as example)
+	- link
+		- create link to a file in any directory
+		- ln -s location
+	- tar
+		- tar is for creating and extracting archives
+		- to create, (tar -cvf name.tar file)
+		- to add to archive, (tar -rvf name.tar file2beadded.txt)
+		- to extract, (tar -xvf name.tar)
+		- if tar.gz or other letters after tar, it means it is compressed. 
+			- use (tar -zxvf name.tar.gz) to decompress extract 
+		- to compress, (tar -czvf name.tar.gz file) (uses gzip) ( .bz for bzip)
+	- wget	- download from link
+
+
+- set up printer
+- use wine for window applications
+- download applications not in debian. (convert from red hat)
+- change the font
+
+firewall
+	- The first line of defence for any computer hooked to internet is a router, an electronic device that allows a number of computers on a local network to connect and share a single connection from your internet service provider(ISP). Most routers include a firewall.
+	- Firewall stops from bad stuff on the web. 
+	- To edit the firewall on your router, type the IP address of the router. 
+	- If not, firestarter is a popular software available for firewalls. 
+	- To stop virus, find antivirus. clamAV is one opensource example. 
+	 
+
+

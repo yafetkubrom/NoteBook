@@ -1,0 +1,30 @@
+Mac
+	raspberry's
+		R1(4GB) - ssh ubuntu@192.168.1.83
+		R2(2GB) - ssh ubuntu@192.168.1.100
+	add bin to path
+		- temporary 
+			edit $PATH	// only current terminal window
+		- permanent
+			edit .zshrc
+			export PATH=$PATH:/Users/yourusername/bin
+			source .zshrc	// refreshes terminal
+
+		ex. intelliJ
+			- nano /usr/local/bin/idea
+				#!/bin/sh
+				open -na "IntelliJ IDEA CE.app" --args "$@" 
+	add user to group
+		sudo dseditgroup -o edit -a john -t user wheel
+		cat /etc/group	| grep <group>
+		groups <user>	// list all groups user is part of
+	add user to sudo
+		https://zwbetz.com/add-your-account-as-a-sudoer-on-mac/
+
+
+	Collapse all windows
+		F11
+	clean up 
+        	- rm -rf ~/Library/Caches/<folder>   // user Caches
+        	- sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed
+        	- Safiri > Preferences > Advanced > Show Develop menu > Develop > Empty Caches

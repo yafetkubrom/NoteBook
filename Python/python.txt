@@ -1,0 +1,33 @@
+python
+
+
+pip
+    What?
+        pip is used to install various packages you may need to carry out an operation.
+        pip3 is used for python3 version.
+    commands
+        pip install <package>
+        python -m pip install <package> // with specific python version
+        pip uninstall <package>
+
+
+    packages
+        packaging 
+            - 
+            - https://packaging.python.org/en/latest/tutorials/packaging-projects/#packaging-python-projects
+        
+        Find packages
+            >>> import mymodule
+            >>> mymodule.__file__
+
+virtual envirnment
+    - A cooperatively isolated runtime environment that allows Python users and applications to install
+    and upgrade Python distribution packages without interfering with the behaviour of other Python applications running on the same system.
+    - best practises
+        - create .venv folder and create all venv directories inside. 
+    - https://docs.python.org/3/tutorial/venv.html
+
+
+pip (question)
+    - Does package installed with pip work with python3 and vise versa?
+

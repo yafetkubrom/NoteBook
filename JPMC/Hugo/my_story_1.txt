@@ -1,0 +1,22 @@
+Find a starting page (with only internal links, with internal & external)
+    - http://localhost:1313/docs/faq/   (has both internal and external)
+
+
+pylinkvalidator is located at 
+    /Users/kubrom/Library/Python/3.8/lib/python/site-packages/pylinkvalidator
+
+
+Plan for today
+ - Find a starting page (with only internal links, with internal & external)	 DONE
+ - Set up pylinkvalidator  DONE
+ - Learn about how python stores modules DONE
+ - Learn about web crawling and link validation 
+ - Make the pylinkvalidator work 
+
+ - Plan for Car and Trip for LA 
+ - Buy Skates and others from Amazon
+ - Check mom's credit 
+
+ - Delete .venv
+
+ * project currently on hold 

@@ -1,0 +1,254 @@
+Book 	: Spring Microservices in Action
+Author 	: John Carnell 
+Github 	: https://github.com/ihuaylupo/manning-smia/tree/master/chapter1.
+
+- Structure
+1 Welcome to the Cloud, Spring
+2 Exploring the Microservices world with Spring Cloud
+3 Building Microservices with Spring Boot
+4 Welcome to Docker
+5 Controlling your configuration with Spring Cloud
+6 on service discovery
+7 Resiliency
+8 Service routing
+9 Securing your Microservices
+10 Event-driven architecture
+11 Distributed tracing with Sleuth and Zipkin
+12 Deploying your Microservices
+
+
+...............................OUTLINE..........................................
+
+Framework for Microservices is trying to manage this six patterns (according to spring)
+	1. Development Patterns
+		1.1 Core Microservice Patterns (Implemented by Spring Boot)
+		1.2 Configuration Management (Spring Cloud Config) (Other choices etcd, eureka, consul, zookeeper)
+		1.3 Asynchronous Messaging (Spring Cloud Stream) (I will try gPRC & kafka & maybe MQ)
+	2. Routing Patterns
+		2.1 Service Discovery Patterns (Spring Cloud Discovery (Netflix Eureka), I will try nginx)
+		2.2 Sercice Routing Patterns (Service Cloud API Gateway, I will try nginx)
+	3. Client Resiliency Patterns
+		3.1 Client-side Load Balancing (Spring Cloud Load Balancer, I will try AWS)
+		3.2 Circuit Breaker pattern (Resiliency4j)
+		3.3 Fallback Pattern (Resiliency4j)
+		3.4 Bulkhead Pattern (Resiliency4j)
+	4. Build Deployment Patterns 
+		4.1 Continues Integration (Jenkins)
+		4.2 Infrastructure as Code (Docker)
+		4.3 Immutable Servers (Docker)
+	5. Logging Patterns
+		5.1 Log Correlation (Spring Cloud Sleuth)
+		5.2 Log Aggregation (Spring Cloud Sleuth or ELK Stack)
+		5.3 Microservice Tracing (Spring Cloud Sleuth or Zipkin)
+	6. Security Patterns
+		6.1 Authorization (Spring Cloud Security or OAUTH2)
+		6.2 Authentication (Spring Cloud Security or OAUTH2)
+		6.3 Credential Management (Spring Cloud Security or OAUTH or JWT)
+
+BE MINDFUL OF THE 12 FACTOR APP (12factor.net)
+
+..................................Details.....................................
+
+Chapter 1 - Welcome to the Cloud, Spring
+	- Key Terms
+		- Microservices
+		- Spring
+		- Cloud Computing
+	- Definitions
+		- Software architecture refers to all the fundamental parts that establish the structure, operation, and interaction between the software components.
+		- Microservice architecture consists of loosely coupled software services that carry out a small number of well-defined tasks and communicate using messages over a network
+		- In a monolithic architecture, an application is delivered as a single deployable software artifact. 
+			 All of the UI, business, and database access logic are packaged together into a unique application and deployed to an application server.
+		- Concept of Microservices came as an answer to large monolithic application which become difficult to scale.
+		- A microservice is a small, loosely coupled, distributed service.
+		- What drove the change to Microservices
+			- software become more complex by needing to interact with more services
+			- need for faster releases
+			- demand for reliable performance and scalability (scale up with volume then scale down as needed)
+			- availability
+		- the formula
+			- Small, Simple, and Decoupled Services = Scalable, Resilient, and Flexible Applications
+		- At this core, Spring is based on the concept of dependency injection.
+		- In response to the shift to microservice, Spring developers launched two projects. Spring Boot & Spring Cloud.
+		- Spring Boot
+			- a framework geared toward Java-based, REST-oriented (Representational State Transfer) microservices.
+			- key features
+				- tomcat - embedded web server
+				- starters - suggested configuration for a fast start
+				- automatic configuration for spring functionality
+				- production ready features
+		- Because microservices have become one of the more common architectural patterns for building cloud-based applications, the Spring development community gives us Spring Cloud.
+		- 1.5 Cloud & Microservice-based Applications
+			- Microservice with Spring-Boot
+				- microservice > Route mapping > Parameter destructing > JSON to JAVA object mapping > Business Logic execution > JAVA to JSON mapping
+			- Cloud Computing
+				- Cloud computing is the delivery of computing and virtualized IT services—databases, networking, software, servers, analytics, 
+					and more—through the internet to provide a flexible, secure, and easy-to-use environment. 
+					Offers advantages for companies with low initial investment, ease of use, and scalability. 
+					- XaaS (Everything as a software) models based on how much control you want to have.
+					- IaaS - user response for everything - AWS EC2, Azure VM, Kubernetes
+					- CaaS - intermediate bn IaaS & PaaS. Amazon ECS. Launch containerized app (docker) into cloud provider.
+					- PaaS - Platforma and environment is already set up. Just focus on app. Cloud Foundry, Elastic BeanStack.
+					- FaaS - Serverless, meaning focus only on functions or services. Upload function only. Lambda, 
+					- SaaS - User just hires the service and use the software. 
+					-- beware FaaS can lock your code to cloud vendor platforms. 
+			- Deploy Microservice to
+				- physical server 
+				- VM image (whole VM)
+				- Virtual Container (Docker)
+		- 1.6 Writing a robust service should be
+			- Right-sized
+			- Location Transparent
+			- Resilient
+			- Repeatable
+			- Scalable
+		- 1.7 Core Microservice development pattern
+			- Web Client > Service Granularity > Communication Protocols > Interface Design > Configuration Management > Event Processing
+		- 1.8 Microservice routing Patterns
+			- Service discovery & Service Routing
+			- Web Client > service routing (API Gateway) > Service Discovery (Netflix Eureka)
+		- 1.9 Microservice Client Resiliency (how you handle failure)
+			- Client-side Load Balancing
+			- Circuit Breaker pattern
+			- Fallback Pattern
+			- Bulkhead Pattern
+		- 1.10 Microservice Security patterns
+			- Authentication
+			- Authorization
+			- Credentials management & propagation 
+		- 1.11 Microservice logging and tracing
+			- Three patterns for logging
+				- log correlation
+				- log aggregation
+				- microservice tracing
+		- 1.12 Application Metric Pattern
+			- Metric
+			- Metric service
+			- Metric visualization suite
+
+Chapter 2 - Spring Cloud
+	- Since Microservices are harder to manage, we need environment to make it easier by implementing all the patterns discussed in chapter 1. 
+	- 2.1 - what is spring-cloud
+		- For example, a cloud-unready application could be a local on-premises application that only contains one specific database configuration, 
+			which must be customized in each installation environment.
+		- It’s important to understand that cloud-ready applications do not require any change or conversion to work in the cloud
+		- 4 principles of cloud native developing
+			- DevOps
+			- Microservices are ...
+			- Continuous Delivery
+			- Containers 
+			- page 38
+	- 2.2 - Spring Cloud by example
+	- 2.3 - cloud-native microservices
+
+
+Chapter 3 - building microservice with spring-boot
+	- 3 critical roles in microservice. Architect, software developer and DevOps. 
+	- architect - decomposing(breakup) the business problem, establishing the service granularity(powdery) and defining the service interface. 
+
+	- INTERNATIONALIZATION (page 74)
+		- set the default locale (@beans)
+		- set a way to retrieve the messages (.properties)
+		- add to controller a way to specify the locale
+	- HATEOAS
+
+	- DEVOPS
+		- 4 principles when operating a microservice
+			1 microservice should be self-contained (solved thru assembly)
+			2 microservice should be configurable (solved thru bootstrapping or separating)
+			3 microservice instance need to be transparent to the client (solved thru service registry)
+			4 microservice should communicate its health. (Solved thru actuator)
+
+Chapter 4 - Docker
+	- Vm vs Containers
+
+Chapter 5 - Configuration
+	5.1 managing configuration and implementation choices
+	- Completely separate configuration of an application from the actual code
+	- build immutable applications that never change 
+	- inject any application configuration at server startup thru env variables or centralized repository. 
+	- four principles 
+		- segregate (configuration file shouldn't be deployed with application)
+		- abstract (use REST API to get it, not specific data storage)
+		- centralized (since microservice might have many configuration. minimize by having one repo)
+		- harden  (highly available and redundant )
+	- When coding, the data access logic should separated from the business logic. Put data access logic into Service and business into Controller.
+	- @ConfigurationProperties can take properties from config file and inject them into the application (config like database connection)
+
+Chapter 6 - On service discovery
+	- 1. the problem
+		- monolithic applications developers overbuy their capacity needs. 
+			since capacity often increase in spikes, monolithic is not efficient.
+	- the solution
+		- microservices allows us to scale new service instances on demand.(horizontal)
+		- service discovery abstract away the location(IP or hostname) of the instances.
+	- 2. the problem
+		- service instances often go down or become unavailable.
+	- the solution
+		- service discovery engines remove the instance and redirect request to another instance.  
+	- why not use DNS or load Balancer
+		- the traditional method of DNS and load balancer works for corprates where 
+			their datacenter is managable and static with few services.
+		- in cloud-native microservice applications, this methods becomes unefficient. 
+			Problems such as single point of failure and centralized repository become hurdles for microserice. 
+	- service discovery in the cloud should be highly available, peer-to-peer, 
+		load-balanced, resilient, and fault tolerant.
+	- the architecture of service discovery
+		- service registration (how a service registers with service discovery agent)
+		- client lookup of service address (how service client looks up service information)
+		- information sharing (how nodes share service information)
+		- health monitoring (how services communicate their health to the agent)
+	* While each instance of a service has a unique IP address and port, each service instance that 
+		comes up registers under the same service ID. A service ID is nothing more than a key that 
+		uniquely identifies a group of the same service instances.
+	- One hurdle for the service discovery model is that if the client is another application and it needs to call 
+		a service again and again, it has to depend on the service discovery agent every time. 
+		- A more robust approach is client-side load balancing. 
+		- an application's client-side load balancing keeps cache of recently communicated services. 
+	- Registering Service with Spring Eureka
+		- Once we set up the Eureka server, we add eureka client dependency on our services so 
+			they can register themeselves to Eureka discovery agent upon running.
+		- Communicate with Eureka service thru Eureka REST API or Eureka dashboard. 
+	- Communication b/n our services (in Spring thru Spring/Netflix client libraries)
+		Spring Discovery client
+		Spring Discovery client-enabled REST API
+		Netflix Feign client
+		* all interact with client-side load balancer and go from lowest level of abstraction for interacting
+			with the LB to highest. 
+		* You should only use the Discovery Client when your service needs to query the Load Balancer to 
+			understand what services and service instances are registered with it
+		* Rest API way is one of the more common mechanisms for interacting with the Load Balancer via Spring.
+
+Chapter 7 - Resiliency Patterns (Resilience4j)
+	Client-Side Resiliecy Patterns
+		Client-side load balancing
+		Circuit Breaker
+			fail fast
+			fail gracefully
+			recover seamelessly
+		Fallback Processing
+		Bulkheads
+	Resilience4j
+		Circuit Breaker - stop making calls when service is failing
+		Retry - retry service when it temporarly fails 
+		Bulkhead - limit the number of outgoing concurrent services (threads)
+		Rate Limit - limit number of calls that a service receives at a time 
+		Fallback - set alternative paths in times of failure	
+		* hystrix is in maintainance mode (no new features being worked on). we use Resilience4j instead. 
+		* AOP 
+
+
+Reference:
+	- Testing
+		- Andy Gumbrecht, and Jason Porter’s book, Testing Java Microservices 
+
+Research Topics
+	- Java Frameworks and how Spring fits in there.
+	- Need for Framework with program languages.
+	- Is there one framework a programming language concentrates on?
+	- @SpringBootApplication
+		- set that class it is on as the configuration class
+		- then it begins scanning for 
+	- SpringApplication.run(LicensingServiceApplication.class, args);
+	- Why is model not a configuration bean like @service or @component?
+	- Vault (Hashcorp)

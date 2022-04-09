@@ -1,0 +1,14 @@
+Resilience4j
+	circuit breaker
+		introduction
+        count-based sliding window
+        time-based sliding window
+        failure rate
+        slow call rate
+
+        CallNotPermittedException
+
+        3 normal and 2 special states
+        OPEN, CLOSED, HALF_OPEN, DISABLED, FORCED_OPEN
+
+        The state of a CircuitBreaker is stored in a AtomicReference

@@ -1,0 +1,39 @@
+- Web Admin Panel 
+	- http://192.168.8.1
+	- If it keep redirecting you to http://192.168.8.1/cgi-bin/luci
+		- use http://192.168.8.1/index instead of http://192.168.8.1
+
+- Authentication
+	- Username : 
+	- Password : SetantaOto78
+
+- Cable Connection
+	- DHCP is the default protocol but check the other ones when class speaks about it. Static and PPPoE.
+
+- Firewall
+	- port forwarding ???
+	- DMZ
+
+- VPN
+	- OpenVPN
+	- WireGuard
+- Random Idea
+	- The doc page for gl-inet is really nice. On the side, it shows you tabs to where you are
+		- https://docs.gl-inet.com/en/3/setup/mini_router/internet/#2-repeater
+
+
+- OpenWrt (OPEN Wireless RouTer)
+	- is a Linux Operating System targeting embedded devices. Instead of trying to create a single, static firmware, OpenWrt provides a fully writable filesystem with package management.
+	- username: root
+	- password: SetantaOto78
+	
+	- OpenWrt intro walkthrough  
+		- LuCi is the web interface packet of openWrt
+
+		- As services are started on the router, the “total available memory” will go down. In the case of the screenshot, there's lot of memory still available. If the amount is very low, the router could slow down and behave erratically. In that case, one would need to stop and disable services on the router
+
+		- DHCP leases represent temporary IP addresses that the router will give out to client computers.
+		- ssh - SSH, allows you to login via a command line. In some rare situations, you may need to login to the diagnose problems without visiting the web administration. In that case you would use SSH so it's important to have that setup
+
+	- Networking notes
+		- incoming packets arriving at input port are switched to outgoing port packet's destination MAC address. If the input port has in its cache the MAC, it just switches. If not, a broadcast packet is flooded to all output ports to identify the correct MAC. (True with OpenWrt)

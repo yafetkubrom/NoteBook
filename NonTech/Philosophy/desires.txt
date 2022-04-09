@@ -1,0 +1,40 @@
+- a person with a desire tends to act in certain ways, feel in certain ways, and think in certain ways
+	- If Nora desires tea, for example, then Nora will typically make herself a cup of tea; 
+	- if she does not get herself some tea right away she will nonetheless typically feel the urge to do so; 
+		- she will find the thought of tea pleasant and will find her current lack of tea unpleasant; 
+		- she will find her thoughts repeatedly turning to the idea of tea; 
+		- she will judge that tea seems like a good idea; and so on.
+
+- 1.1 action based theories of desire
+	- For an organism to desire p is for the organism to be disposed to act so as to bring about p.
+		- stutter?
+	- For an organism to desire p is for the organism to be disposed to take whatever actions it believes are likely to bring about p.
+
+	- In both the case of desire and of belief in the good, being in such a state is being disposed to take whatever actions are believed likely to bring about what is desired or what is judged good. But according to these philosophers, desires and judgments of goodness are very different things. Hence action-based theories of desire fail to make an important distinction
+
+- 1.2 pleasure based theories of desire
+	- For an organism to desire p is for the organism to be disposed to take pleasure in it seeming that p and displeasure in it seeming that not-p.
+	- A difficulty for pleasure-based theories of desire is that pleasure has seemed to some to have a causal or representational relationship to desire
+- 1.3 good based theories of desire
+	- For an organism to desire p is for it to believe p is good
+	- one argument says there is inconsistencies between rational desire and rational belief.
+		- On Stampe's view, this distinctness is best demonstrated by the fact that it is consistent to claim to believe that something is good while it does not seem good (i.e., is not wanted), but it is not consistent to claim to desire something while it does not seem good (i.e., is not wanted)
+- 1.4 attention-based theories of desire 
+	- this theory links desires to reasons, rather than goodness.
+	- For an organism to desire p is for the thought of p to keep occurring to the organism in a favorable light, so that its attention is directed insistently toward considerations that present themselves as counting in favor of p.
+
+	- Like good-based theories of desire, Scanlon's attention-based theory of desire has not yet been engaged at length by proponents of more conservative theories of desire,
+- 1.5 learning-based theories of desire
+	- For an organism to desire p is for it to use representations of p to drive reward-based learning.
+	- Of all the theories of desire considered here, learning-based theories of desire have the least a priori credibility
+- 1.6 Holistic (functionalist and interpretationalist) theories of desire
+	- So far, only single-feature theories of desire have been considered. But there are also a number of theories of desire that refuse to privilege any one feature. Instead, these theories make central theoretical appeal to the total package of features associated with desire. 
+	- 
+
+2 - varieties of desire
+- 2.2 intrinsic, instrumental, and realizer desire
+	- intrinsic - desires for state of affair that are wanted for themselves. ex. Desire for welfare of your child
+	- instrumental - as means to an end. ex. Desire for welfare of your child so you wouldn't be sleepless out of worry.
+		- first-order and second-order desires. Love could be second-order desire to satisfy something else (first-order)
+	- realizer - desire for an end that would count as one possible realization of an intrinsic desire.
+		- desire not to yell at drunk so to maintain civility. This is not quite instrumental if your desire is to yell at the person. 

@@ -1,0 +1,100 @@
+Book - <Cloud Native Java>
+
+Chapter 1 - Cloud Native Application
+
+Key Terms - <>
+	- legacy 
+		- (as in legacy code) page 32 in cloud native java
+	- platform
+		- page 34 cnj
+		- set of capabilities that help us either build or run application. 
+		- best categorized by the constraints they set on developers when developing. 
+	- application
+		- 
+	- agile - able to move quickly and easily. 
+	- provisioning
+		- the action of providing something for use.
+		- supplying.
+	- artifact 
+	- pools (page 46 cnj)
+	- DevOps
+		- new operational model where each team become a product team. Meaning they have all they need to build and operate their software (product).
+
+Definitions
+	- Platform
+		- Ideas, Constraints, Practices
+		- Platform is a tool that automates a set of repeatable practices.
+		- practices are formulated from set of constraints that translate idea into plan.
+		- AWS provides services in a cloud that app developers could use instead of building their own platform.
+		- ex. Cloud Foundry is Platform as a Service
+	- As software applications turn into complex distributed systems, operational failures become an inevitable result.
+	- Amazon reaped the benefit of ultra-scalability by building cloud native services but the tools to build one wasn't available. Until open source projects maintained by one team began to surface. That team was Netflix. 
+	- Scalability
+		- scalability - the ability to change in size or scale.
+		- scale is hindered by risk. Increasing scale increases risk.
+		- This creates conflict between developers and operators.
+		- solution is to include operator's needs in the developing process.
+	- Reliability
+		- service agreement between teams. (Team a produces this data to be consumed by team b )
+		- service agreements must be explicit to reduce the risk of unexpected behavior. 
+		- this service agreements increase the scale of apps without much error therefore are used to predict value. (This cost will produce this much value).
+		- this predictable behaviors which we call reliability. 
+	- Cloud Computing Stack
+		- Application -> Platform -> Infrastructure
+		- SaaS -> PaaS -> IaaS
+	- Cloud native is for companies that can't reliably predict when and where business capacity will be needed.  
+	- With AWS expanding availability zones to regions outside the United States, Netflix expanded its services globally using only the management APIs provided by AWS.
+	- Microservices
+		- software that is meant for change becomes a living thing.
+		- we can't predict the future so design with today in mind.
+		- Microservices and the cloud are two forces influencing rapidity of architectural change.
+	- Splitting a monolith
+		- two reasons by Netflix. Agility and reliability.
+		- Netflix also moved to DevOps approach. 
+	- Netflix OSS
+		- Netflix opened their project to the public where different developers could continuously improve it.  
+	- In this lesson, we will implement this lessons by 
+		- building resilient distributed systems using spring and Netflix OSS.
+		- continues delivery to operate cloud native application using Cloud Foundry. 
+	- To build a cloud native app, you should use the 12 factor app at 12factor.net
+	- Spring Boot
+		- a way to create Spring application with minimal set up time. 
+		- takes an opinionated view of spring platform. 
+		- therefore it is a framework that uses the Spring Ecosystem. 
+
+
+Chapter 2 - BootCamp - Intro to Spring Boot and Cloud Foundry
+Key Terms - 
+
+Definitions - 
+
+
+
+Structure - 
+	- Basics 
+		- Motivation for Cloud and intro to spring boot & Cloud Foundry
+			- Chapter 1 - Cloud Native Application
+			- Chapter 2 - Bootcamp
+		- Configure Spring Boot
+			- Chapter 3 - Twelve Factor Application 
+		- Test Spring Boot Apps
+			- Chapter 4 - Testing
+		- Refactor Code to Cloud Platform (Cloud Foundry)
+			- Chapter 5 - The forklifted application
+	- Web Services
+		- HTTP and RESTful
+			- Chapter 6 - RESTful 
+		- ingress and egress
+			- Chapter 7 - Routing
+		- Handle request from outside
+			- Chapter 8 - Edge Services
+	.....
+
+
+- Research 
+	- How do Netflix use Cassandra?
+	- If internet is fast and my data center is huge, no need for cloud 
+	- But we put too much trust on IaaS like AWS. If it goes down, many companies will too
+	- How linux use the idea of containerized or distributed micro processes?
+
+Pioneer tax - when doing what has been undone before, you paid the price of working through issues. 

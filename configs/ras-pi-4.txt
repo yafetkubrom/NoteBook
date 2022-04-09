@@ -1,0 +1,53 @@
+Raspberry pi 
+	- series of small single-board computers
+	- developed in UK by Raspbeery Pi F & Broadcom.
+
+Raspberry pi 4 (mine)
+	OS - Ubuntu Server
+	SoaC - Broudcom BCM2411B0
+	CPU - 1.5 GHz quad-core A72 64-bit
+	memory - 2 (2, 4, 8) SDRAM
+	gpu - Broadcom VideoCore 500 MHz
+
+Ubuntu
+	Install from https://ubuntu.com/raspberry-pi
+	disksutil list
+	dd if=<input> of=<output> bs=4M		// output=/dev/disk4
+	
+	troubleshoot
+	- diskutil
+		- df -h
+		- diskutil unmount disk/diskns1
+		- df -h		// to make sure it is unmounted
+
+
+Credentials
+	raspberry 2 - 
+		ubuntu password - Altoids2049
+
+
+
+1 - install heatsink 
+	- it keeps temperature down on cpu, memory and 
+
+2 - connect all components
+3 - micro sd come with noobs so I installed raspbian full. 
+
+Project ideas:
+ Use pi as server and write server-client code
+ pi hole
+ Write to pi from linux via ssh
+
+
+What's next?
+https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/6
+
+Ip 
+192.168.1.87
+
+Password
+Trico2020!
+
+Apache
+	- Apache is a popular web server application you can install on the Raspberry Pi to allow it to serve web pages.
+	- On its own, Apache can serve HTML files over HTTP. With additional modules it can serve dynamic web pages using scripting languages such as PHP.

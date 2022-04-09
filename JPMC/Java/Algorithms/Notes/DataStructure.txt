@@ -1,0 +1,15 @@
+Data Structure 
+    - group of data elements which provide efficient way of storing and organizing data.
+    - Examples - arrays, linked list, stack, queue...
+    - used heavely in cs algorithms as they enable programmer to handle data in effcient way.
+    - plays vital role in enhancing performance of software since software's main function is to store and retrieve user's data as fast as possible. 
+    
+    - ADT
+
+    - operation on data Structure
+        - Traversing
+        - Insertion
+        - Deletion
+        - Searching
+        - Sorting
+        - Merging

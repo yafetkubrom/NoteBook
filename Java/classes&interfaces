@@ -1,0 +1,16 @@
+Class
+    Fields - store object state
+    Methods - execute code that manuplate states and perform operation
+    Constructor - execute code used during objection creation to set initial state
+
+new 
+    allocate memory described by class & return reference to allocated memory.
+    object holds the reference
+    Classes are reference types
+
+interface
+    generic interface 
+
+
+Questions
+    Why do we need main class to run main method?

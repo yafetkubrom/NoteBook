@@ -1,0 +1,160 @@
+Question 01
+What is encompassed in the question “why computer ethics?” In other words, what more specific questions are included in the broad question?
+
+Broadly speaking, the "why computer ethics" question covers ethical concerns with new technology specific to information. It encompasses some question that are found in any discussion about technology like atomic bomb or electricity. But the discussion goes further into the computer information realm. Some examples of these questions are: Do existing theories cover this questions or does this new technology require separate theories? And if so, why does it need its own set of theories? Which theories work and which doesn't in discussing computer ethics. Basically, this questions set the stage for the specific questions that need to be answered. 
+
+2. Give a concise summary of Moor’s standard account of computer ethics.
+
+New technology gives way to new possibilities. It solves human problems in ways never imagined before. But it could also have unforeseen consequences. And sometimes, the consequences outweigh the benefits. Therefore, we need to analyze the new technology from different perspective. Analyzing the new technology from an ethical perspective is very important since it dictates whether the new technology should or shouldn't be adopted after examining its work. Moor's standard account gives reasons for examines new technologies from an ethical perspective to view its implications. 
+
+3. What is a policy vacuum? Give an example, and explain it using the standard account.
+
+Policy Vacuum is the uncertainty regarding access and use when a new technology is adopted. When a new technology is adopted by a company, it is sometimes not clear what are the rules. If there is no policy for a new technology because it is new, it creates a vacuum policy. 
+For example, when computers were first introduced, individuals would store files on them. There were no policies regarding who could access a file. But since computers were huge objects located inside a building, the building's law would govern access to files. But when remote access become possible, it opened the door to hackers. Since individuals are not physical inside the building, it would not be considered trespassing. This introduced a policy vacuum since there were no policy to deal with the new technology. 
+
+4. What is a conceptual muddle, and how do they get in the way of filling policy vacuums? Illustrate with an example.
+
+Conceptual muddle is the confusion that must be solved when defining an abstract idea. The task of computer ethics is to fill policy vacuums but it is a difficult task that involves sorting out the conceptual muddle. For example, when computer softwares were first being used, a question of ownership was faced. People who invented something would cover their invention with patent or copyright. But patent and copyright has rules against abstract ideas with patent being even strict. So was software an an expression of abstract idea or a step in creating something bigger. If so, it cannot be patented. So to solve this issue, computer software has to be conceptualized. From that discussion, we can answer the question of patent and copyright. Therefore, the question of conceptual muddle had to be solved before the policy vacuum would be addressed. 
+
+5. What is wrong with the standard account of computer ethics? Identify at least two criticisms, and explain.
+
+First criticisms is that it focuses on newness. It forces us to have ethical conversion about a new technology. But that is over once the technology is in use. There is no follow up discussion. As it is relevant to computer technology, the tools can change over time and will require more ethical convo at each stage.
+Second the questions that the standard account focus on are not unique to computer technology but are meant to govern all technology. As it has become obvious, computer technology is in its own realm and needs special ethical discussions for its practices. 
+
+6. What are the two tenets of the view referred to as “technological determinism”? What is the STS critique of each tenet?
+
+The two tenets of technologolica determinism is that first, technology is developed independent of society or in isolation from society and second, when sociaty adopt the technology, the technology determines the character of the society. 
+STS critics disagree. Their view to the first tenet is that technology is heavily influenced by social factors therefore it is not independent of society. Even though it is developed in labs and through methods of their own, the demand and the fund determines what gets used and how the technology is shaped. Even though STS critics disagree heavely with the first tenet, their problem with the second tenet is a bit complicated. They believe society does get influenced by new technology but also society as a whole does influence use of technology as well. For example, Facebook rolled out many changing that received push back and therefore had to improve it. Therefore, society has influenced Facebook to what it is today as well. Therefore, there is a mutual influence on each other between society and technology. 
+
+7. What is wrong with thinking of technology as merely material objects?
+8. What is a sociotechnical system?
+Technology is not material object but sociotechnical system (combination of things and people).
+
+9. Choose a familiar technology and describe its values.
+10. What is the difference between micro-level ethical issues and macro- level ethical issues? Give an example of each.
+
+Micro-level ethical issues deals with personal issues people have with a technology and those decisions while macro-level deals with the system as whole along with the rules and policies. 
+11. Why is the study of ethics and technology needed? Why is the study of ethics, and IT in particular, needed?
+
+Ethics - moral principles that govern a person's behavior or the conducting of an activity
+
+Moral - concerned with the principles of right and wrong behavior and the goodness or badness of human character.
+
+
+Hello Laureli
+
+You explained Moor's standard account very well. New technologies create new possibilities but also new ethical questions. I believe people are more likely to ignore the ethical concerns if the new technology is attractive or exciting. Nevertheless, Moor's article does a good job of setting the stage and highlighting both the possibilities and questions.
+
+In my opinion, most people tend to be more concerned with micro-level than macro-level ethical issues. In an individualistic culture like ours, we wouldn't be concerned with overall danger of new technology if we believe it is not hurting us. For example, there is less hype over tech teams using our data to make money. Beside some experts or anti-trust committees, individuals are less concerned with the implications of new technology if it doesn't directly hurt them.  
+
+
+
+Chapter two
+1. How do descriptive (empirical) claims and prescriptive (normative) claims differ? Give examples of each kind of claim.
+
+Descriptive claims are statements that describe some event that is taking place or took place. For example, "70% of American citizens have access to internet as their home". This is descriptive statement that could be proven through observation or survey. So whether true or false, there is a way to prove it. 
+Prescriptive statements, on the other hand, are statements that make recommendation based on this descriptive claim. For example, "More people should have access to the internet in US". Even though we can use empirical evidence to support the claim, it is still a statement about why something should happen, not that it is happening. 
+
+2. Describe a discussion of a moral issue that is currently receiving attention in the media. Identify different claims and arguments that were put forward and defended. List the claims in an order that illustrates a dialectic about this issue, with one claim and argument leading to another claim and another argument, and so on. Are there some claims that are still being presented in the media that have, in your judgment, already been rejected in the dialectic?
+
+  
+3. Explain the difference between “ethics is relative” as a descriptive claim and as a normative claim.
+
+As a descriptive claim, "ethics is relative" makes a strong argument. One can bring proofs that ethical thinking differs from society to society or culture to culture. For example, as an American, I would not think it is ethically wrong for women to wear face covering in public but there are cultures where that is true. Therefore, ethic is relative to the society or culture. But as a normative claim, it runs into issues. Said another way, what is right and what is wrong is relevant to cultures. So if I move to another culture, will I conform to that ethical belief because I am now there. That would bring problems because people will interact. Also, there are some universally accepted ethical beliefs. Therefore, the statement runs into issues as a normative statement.
+
+Personally I don' agree because as part of a christian culture, I do not conform to other ideas. But I understand what is wrong to me might be acceptable to someone else. This gives us an opportunity to discuss our viewpoints without necessarily attacking each other's beliefs but it will not guarantee that we will come to a common ground. 
+
+4.What evidence can be used to support “ethics is relative” as a descriptive claim?
+
+There are three evidences discussed in the book. First there are many variations in what particular individual or group consider right and wrong. Second,moral norms vary over time. Example, Slavery was acceptable once upon a time but is accepted that it is wrong today. Third, Moral belief are largely influenced by where I grew up. 
+
+5. What are the three problems with “ethics is relative” as a normative claim?
+
+First. To claim "ethics is relative" to a culture would mean that a member of a group would believe their way is right. That would be universal belief then because they believe everyone should have this mindset. Also ethical relativist says that ethnocentrism, judging the practices of another culture through the lens of your culture, should be avoided for tolerance between groups. This is also a universal belief then that comes from ethical theory that all should have. 
+
+Second. Some of the moral heroes, like Socrates, Martin Luther King, Ghandi and Jesus, were considered bad or wrong for going against their respective group's ethical beliefs. Therefore adopting a normative claim should mean members following their culture's morals but doesn't have room for the rebellions. 
+
+Third. More specifically to IT issues, what someone beliefs can be strongly opposed by a group. In this situation, "well, do what you think is right" is not helpful.
+
+6. What is the basic principle of utilitarianism?
+7. What is the difference between an instrumental good and an intrinsic
+good?
+8. Why do utilitarians believe that happiness is the ultimate basis for
+morality?
+9.What is the difference between act-utilitarianism and rule-
+utilitarianism?
+10. What is the major criticism of utilitarianism? Explain it using an
+example other than the distribution of scaree medical resources.
+11. What is the unique characteristic of human beings according to
+deontologists? How is this quality connected to morality?
+12. What is the categorical imperative? Give two examples of violations of
+the categorical imperative.
+13. How can rights be based on deontological theory? How can rights be
+based on utility theory?
+14. What is the veil of ignorance in the original position in Rawls’s social
+contract theory?
+15. What are the two principles of justice in Rawls’s theory?
+16. How does virtue ethics theory differ in focus from other theories
+discussed in this chapter?
+17. What is analogical reasoning? Give an example of how it can be used
+in computer ethics.
+18. Why should we always use caution when arguing on the basis of
+analogies?
+
+
+
+Chapter 3 
+1.This chapter considers how technology should be conceptualized. What are the advantages of thinking about technology as the instrumentation of human action?
+2. What is captured, and what is lost, when certain forms of IT are conceptualized as robots, and when human beings are conceptualized as cyborgs?
+3. How does the scope of communication on the Internet differ from other forms of communication such as telephone, television, newspaper, and talking face-to-face?
+ 
+4. Why is it not accurate to say that communication on the Internet is anonymous? What is different or distinctive about the identity conditions on the Internet when compared to identity face-to-face?
+5. What is reproducibility, and why is it significant?
+6. Did anyone do anything wrong in the virtual rape case? If so, who?
+What was the wrongdoing? Develop analogies between the behavior in
+this case and other kinds of behavior that occur offline.
+7. Explain the statement that social networking sites shape, and are shaped by, friendship.
+
+Social networking has influences your friendship. So for that reason, the technology and features around social networking will revolve around this idea. Social networks allow people to stay close with their friends around the world. But for those friends who are not in the social network, they might not be as close. It is true that there are other means to stay with friends and family across long distance but with social media, it makes it easier. Therefore social media plays a role in whose friends you will stay close with and which ones you will not. Since social media companies know this fact, they work a lot in those features that have to do with keeping friends close. So they both influence each other. 
+
+8. What characteristics of IT (and the Internet) change the environment
+for plagiarism and plagiarism detection?
+9. Identify and explain the four arguments made to show that the Internet
+is a democratic technology.
+10. Do any of the four arguments in question #9 hold up to critical
+scrutiny? Explain which argument you think holds up the best. Do you think that this best argument is convincing?
+
+
+Chapter 5
+
+1. What is software? What is hardware?	
+	- Hardware refers to machines; machines are tangible, material objects. Software refers to sets of instructions for machine components. Software controls and configures hardware.
+2. What are the differences between object programs, source programs,
+and algorithms?
+	- In the context of software, the algorithm is step-by-step method of solving a particular problem. Depending on the problem, the are many algorithms that could solve it. They differ by the time they take, or space they will use. Source Code is the program that is expressed in a programming language. When it is compiled, it is referred as object code. Source code could be read by humans but object code is meant for the machine and hard to be read by humans. 
+3. What is the aim of the U.S. copyright system?
+
+Question 03
+	The aim of the U.S. copyright system is rooted in U.S. Constitution that promotes progress of science and useful arts by securing to authors and inventors exclusive rights to their product. It shows that copyrighting is used as way of making progress in the areas of science and arts. If authors and inventors could not protect their product from theft, then they would not be motivated to create. The fact that there are laws to protect them is a one motivation for creating or improving products. Of course, those copyright does not cover all the product. There is a distinction between the idea and the expression. Authors cannot copyright the idea but only the expression. This gives room to competition where different parties could build upon ideas from each other. But they cannot still the end product. 
+
+4. Why is copyright problematic for protecting software ownership?
+5. What does a copyright holder have to show to prove infringement?
+6. What must copyright holders show in order to prove that they had a
+legitimate trade secret?
+7.Why is trade secrecy problematic for the protection of software
+ownership?
+8. How is a patent a monopoly?
+9. What tests must a patent claim satisfy to obtain a U.S. patent?
+10. What cannot be patented in the United States? Why?
+11. What are the three different forms of digital sharing discussed in this
+chapter?
+12. What are the four freedoms that FS advocates try to preserve?
+13. What is Locke’s labor theory of property? Why doesn’t it necessarily
+apply to ownership of computer software?
+14. What natural rights arguments can be made for and against ownership
+of software?
+15. The authors argue that software copying is immoral because it is
+illegal. List the logical steps they used to arrive at this conclusion. Is the argument valid?
+
+
+The three forms of legal protection that are now widely used to own and control access to software. These legal tools create proprietary software. 

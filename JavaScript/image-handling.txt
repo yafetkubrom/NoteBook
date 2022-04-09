@@ -1,0 +1,29 @@
+In Node Js function, req.body handles strings. For files (ex. images), you have to choices.
+    - send it raw as binary (con : wont know where it came from unless you somehow attach extra data)
+    - Send along with other data (form data) (preferred)
+
+To send along with other data, use library. I use multer
+
+multer
+    nodejs middleware for handling "multipart/form-data" which is primarily used for uploading files.
+    only hanldes multipart form 
+    npm install --save multer
+
+    set size limit
+    const upload = multer({storage: storage, limits: {
+        fileSize: 1024 * 1024 * 
+    }});
+
+    filter 
+    const fileFilter = (req, file, cb) => {
+        if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+            cb(null, true);
+        } else {
+            cb(null, false);
+        }
+    };
+
+    Storing files into folders makes the file harder to retrieve. two ways to solve.
+        make the folder available to public
+            app.use('/uploads', express.static('uploads'));
+        programmically configure the get request to look inside that folder name

@@ -1,0 +1,23 @@
+lsof -p <pid>	// to know open descriptors
+
+
+sed -n '1,5p' thread.c > ../process/process.c
+if process.c does not exist, it will create it
+valgrind -s --leak-check=yes ./a.out 
+
+remove all packages installed after certain time
+	- grep "2015-12-19.*.install " /var/log/dpkg.log | awk '{ print $4 }' | cut -d: -f1
+		- to check
+	- grep "2015-12-19.*.install " /var/log/dpkg.log | awk '{ print $4 }' | cut -d: -f1 | xargs sudo apt --yes purge
+		- to delete
+		
+file	determines file type
+wc 	word count
+sort 	sort line by line
+sort -r reverse
+find	find . -name ".txt" -print
+	find N/ -name ":0" -exe chmod +x {};
+locate	"by name"
+grep	print lines matching pattern
+	grep -i "param" test.c
+	more test.c | grep "pattern"

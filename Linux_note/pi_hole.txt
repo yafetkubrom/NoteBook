@@ -1,0 +1,29 @@
+Pi-Hole is a Linux network-level advertisement and Internet tracker blocking application. 
+	- OS : Linux
+	- Written in : Bash, PHP (optional web server), C (optional), and CSS.
+	- Website : https://pi-hole.net
+	
+Download
+	1. Install a supported operating system (or use container)
+	2. Install Pi-Hole
+	3. Use Pi-Hole as your DNS server (configure your router)
+	4. If you want ad block on the go, use VPN
+
+access it
+	192.168.187/admin
+Login
+	password = uiEjDijG
+update
+	pihole -up
+
+check for updates
+	pihole -up --check-only
+ssh
+	ssh pi@<ip>
+	
+Q1. Is it safe for raspberry pi to run continuesly 24/7?
+	- https://raspberrypi.stackexchange.com/questions/325/is-the-raspberry-pi-suitable-for-running-continuously-24-7
+	
+Q2. Is there an all inclusive blocklist that blocks all unwanted sites?
+	- That is not possible. Everybody wants to block different things. Here is a website that has different lists. https://firebog.net/
+	- There are two ways to block sites. blocklists and regex. 

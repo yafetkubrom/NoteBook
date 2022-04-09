@@ -1,0 +1,21 @@
+Software Testing 
+    the proces of evaluating and verifying that a software product or application does what it is supposed to do.
+
+    2 testing practises:
+        Manual - done by person, interacting with software or API with some tool
+        Automatic - done by machine, executes a test script written in advance.
+        * Automatic testing is integral part CI/CD. (check out DevOps testing tutorials)
+    
+    3 major types of testing
+        Unit Tests - low level, test individual methods, and functions of a class.
+        Integration Tests - verify that different modules or services work well together. ex. b/n microservices.
+        Functional Tests - focus on business requirements of an application. focus on output.
+    Other types    
+        End-to-end Tests - replicates user behavior with the software. verify various user flows work as expected.
+        Acceptance Testing - verify if a system satisfies its business requirments. requires for entire app to be up.
+        Performance Testing - check behavior of the system when it is under significant load.
+        Smoke Testing - basic tests that check basic functionality of the app. useful right after new build. 
+
+Automating Testing
+    To automate testing, you need to write them programmatically using testing framework.
+        Java -> JUnit5, AssertJ

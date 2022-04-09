@@ -1,0 +1,42 @@
+1) What are the jobs of Operating System (O/S)
+* Manages the resources of the computer (including peripherals, files, and memory)
+* Coordinates all other programs running on the computer.
+
+2) What is the Kernel?
+* O/S is a collection of programs, the heart of which is the kernel. After bootloading, the kernel is executed. 
+The kernel eventually runs the process which spawns all other processes. It also act as moderator between 
+applications and the resource of the computer.
+
+3) What are system calls and API?
+* System calls are set of functions to other programs provided by kernel. System calls are used to request access
+to the resources of the machine, to communicate with other running programs and to start new program.
+* A collection of system calls are called API(Application Programming Interface)
+
+4) Do all operating systems procide similar set of system calls.
+* No, they provide different sets. But a standard has been developed to regularize at least some system calls. 
+one example of such subset is POSIX.
+
+5) What are some families of system calls?
+* Memory management system calls - manipulate block of memory (ex. mmap() )
+* Time management system calls - access system clock (ex. settimer() )
+* File system calls - access a file or a device (ex. open() read() )
+* Process system calls - run another program or control how it runs. (ex. wait() )
+* Signal system calls - send message to process (ex. kill() )
+
+6) What is the relationship between system calls and standard libraries?
+* Standard library uses system calls as part of their code. ex. malloc() 
+is in C library that use mmap() which is system call. or fread() use read().
+* But fread() has more uses than just read(). its code allows it to buffer,
+for instances. 
+* Standard library are also more portable. Even though both have a standard 
+(anci C for C and POSIX for system calls) but system calls tend to differ from 
+OS to OS. So Standard libraries are more portable and used for application where
+portibility is important. 
+
+7) When do use of system calls are needed instead of standard library?
+* Standard library tend to hide the detail of how sources of computers are managed. 
+For example, it hides details of memory and present it to programmer as huge chunk(virtual memory)
+Most application does not care about the detail but if needed, we can access
+system calls (memory management system calls) to have direct access. 
+
+8)  

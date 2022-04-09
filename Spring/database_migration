@@ -1,0 +1,13 @@
+liquibase
+    basic implementation : https://itnext.io/springboot-liquibase-and-mariadb-b3f943c29370
+    more advanced : https://docs.liquibase.com/tools-integrations/springboot/springboot.html
+
+
+troubleshoot : database not created
+<configuration>
+  <changeLogFile>src/main/resources/changelog.xml</changeLogFile>
+  <driver>com.mysql.jdbc.Driver</driver>
+  <url>jdbc:mysql://localhost:3306/myApp?createDatabaseIfNotExist=true</url>
+  <username>liquibaseTest</username>
+  <password>pass</password>
+</configuration>

@@ -1,0 +1,66 @@
+Book - Spring In Action
+
+Part 1 Chapter 1 - Getting Started with Spring
+
+Key Terms - 
+	- Reactive Programming - 
+		- Reactive programming creates software that responds to events rather than solicits inputs from users.  
+		- An event is simply a signal that something has happened.
+		- they must be processed in real time. 
+	- Beans
+	- autowiring (page 28)
+		- Spring automatically inject the components along with the other beans it depend on. 
+	- component scanning
+		- Spring will discover component from apps classpath and add them as beans. 
+	- autoconfiguration 
+		- Spring Boot can make reasonable guesses of what components need to be configured and wired together, 
+		- based on entries in the classpath, environment variables, and other factors 
+	- render - process that turns website code into interactive page. 
+	- parse - analyzing and converting a program into internal format a runtime env could actually run.
+
+
+Definitions - 
+	- Application is a container with many components.  
+	- Spring application context 
+		- Spring offers a container that create and manage application components. 
+	- Beans - this components are called beans. 
+	- This beans are wired together inside the spring application context like bricks make a house. 
+	- Dependency Injection - act of wiring together beans. 
+		- instead of components create and manage other beans it depends on, 
+			it lets the container create and manage them and inject them as needed.  
+	- WAR was traditionally used for applications and JAR for libraries but with cloud, JAR is better approach for application too.
+	- Explanation of what is provided by spring initializer (1.2.2)
+
+	- @controller, @service, @repository identifies the class as component for component scanning. When discovered, it becomes a bean 
+		in the spring application context
+
+Technologies
+	- Thymeleaf is a template engine for HTML 
+		- It caches template pages when they are parsed so that they won't be parsed again.
+		- the disadvantage is that when developer changes a template, the program will still run the one in cache. 
+		- LiveReload is part of DevTools that if your browser supports it, could reload when changes are made.  
+	- devTools enables developer to change HTML or Java code while application is running and the app will automatically refresh. 
+		- with devTools enabled, Spring loads the app into two parts. Code that could change (src/main) and code that won't (dependencies, JVM)
+		- Therefore change to dependency won't be recognized. Must do hard reset.
+		- If H2 (in-memory DB) is enabled, devtools have an interface to display the tables.
+			- http://localhost:8080/h2-console  
+	- Core Spring Framework
+		- core container and dependency injection framework
+	- Spring Boot
+		- Starter dependency and autoconfiguration
+		- Actuator provides runtime insight into inner workings of running application
+	- Spring Data
+		- Allow you to define your application's repositories as java interfaces and work with different databases. 
+	- Spring Security
+		- authentication, authorization, API security. 
+	- Spring Cloud
+		- Microservices
+	
+
+Structure
+	Part 1 - Foundational Spring
+		- Chapter 1 - Getting Started with Spring
+		- Chapter 2 - Developing Web Application
+		- Chapter 3 - Working with Data
+		- Chapter 4 - Securing Spring
+		- Chapter 5 - Working with Configuration properties

@@ -1,0 +1,61 @@
+Info about Docker
+
+Commands
+	docker build -t <your docker hub id>/platformservice . 
+		id : dockdockduce
+		"don't use upper case for name of service
+	docker run -p 8080:80 -d <your docker hub id>/platformservice
+	docker ps (list of running docker containers)
+	docker stop <container id>
+	docker start <container id>
+	docker ps --filter "status=exited"		// list all stopped containers
+	docker push <your docker hub id>/platformservice
+		if push is denied, try 'docker login'
+
+Commands (on Linux)
+	sudo systemctl start docker
+	sudo gpasswd -a "${USER}" docker
+	container
+	docker rm mariadbtest	// remove container
+	docker rm -v mariadbtest	// remove container and volume
+	image
+	docker image rm <name>
+	docker rmi image_name
+
+Commands (MariaDb)
+	pull
+		docker pull mariadb
+	run
+		docker run --name=maria -d -p 3306:3306 --env MARIADB_USER=user --env MARIADB_PASSWORD=password --env MARIADB_ROOT_PASSWORD=root_password mariadb:latest
+		docker logs maria
+	connect locally
+		docker exec -it maria mariadb -uroot -p
+	stop
+		docker stop maria
+	list
+		docker ps --filter "status=exited"
+	remove (container & volume)
+		docker rm -v maria
+	Reference
+	* https://hub.docker.com/_/mariadb
+
+Commands (MySQL)
+	pull
+		docker pull mysql/mysql-server:tag
+	run
+		docker run --name=mysql1 -d mysql/mysql-server:tag
+		docker logs mysql1
+		docker logs mysql1 2>&1 | grep GENERATED	// find generated password
+	connect locally
+		docker exec -it mysql1 mysql -uroot -p
+	Reference
+	* https://hub.docker.com/r/mysql/mysql-server/
+
+
+Spring Boot
+	mvn clean install or ./mvnw package
+	mvn clean install && mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
+	mvn clean install -DskipTests && mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
+
+On mac, containers and images are stored at 
+	- ~/Library/Containers/com.docker.docker/Data/vms/0

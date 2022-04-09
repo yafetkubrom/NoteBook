@@ -1,0 +1,4 @@
+1. sudo apt install openssh-server
+2. sudo ufw allow ssh (notify firewall to accept ssh)
+3. ip a (to know ip address of server)
+4. more /etc/ssh/sshd_config (to edit)

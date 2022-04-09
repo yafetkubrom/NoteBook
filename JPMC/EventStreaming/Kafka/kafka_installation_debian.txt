@@ -1,0 +1,63 @@
+Reference https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-debian-10
+
+sudo apt update && sudo apt upgrade
+sudo apt install openjdk-8-jre-headless
+java -version
+
+create a kafka user incase your system is compromised.
+	- sudo useradd kafka -m	// -m flag mean create a home directory
+	- sudo passwd kafka
+	- sudo adduser kafka sudo
+	- su -l kafka
+
+Download & Extract Kafka binary
+	- mkdir ~/Downloads
+	- sudo apt install curl
+	- curl "https://archive.apache.org/dist/kafka/2.1.1/kafka_2.11-2.1.1.tgz" -o ~/Downloads/kafka.tgz
+	- mkdir ~/kafka && cd ~/kafka
+	- tar -xvzf ~/Downloads/kafka.tgz --strip 1	// --strip 1 flag means extract to kafka folder
+
+Configure Kafka Server
+	- nano ~/kafka/config/server.properties	// kafka configuration option
+	- add this to bottom of line (will allow us to delete topics)
+		- ...
+		group.initial.rebalance.delay.ms
+		delete.topic.enable = true
+
+create systemd unit file for kafka server 
+	- sudo nano /etc/systemd/system/zookeaper.service.....................
+
+[Unit]
+Requires=network.target remote-fs.target
+After=network.target remote-fs.target
+
+[Service]
+Type=simple
+User=kafka
+ExecStart=/home/kafka/kafka/bin/zookeeper-server-start.sh /home/kafka/kafka/config/zookeeper.properties
+ExecStop=/home/kafka/kafka/bin/zookeeper-server-stop.sh
+Restart=on-abnormal
+
+[Install]
+WantedBy=multi-user.target
+
+	- sudo nano /etc/systemd/system/kafka.service
+
+[Unit]
+Requires=zookeeper.service
+After=zookeeper.service
+
+[Service]
+Type=simple
+User=kafka
+ExecStart=/bin/sh -c '/home/kafka/kafka/bin/kafka-server-start.sh /home/kafka/kafka/config/server.properties > /home/kafka/kafka/kafka.log 2>&1'
+ExecStop=/home/kafka/kafka/bin/kafka-server-stop.sh
+Restart=on-abnormal
+
+[Install]
+WantedBy=multi-user.target
+.............................
+
+To start
+	- sudo systemctl start kafka
+	- sudo journalctl -u kafka	// default kafka port 9092 
