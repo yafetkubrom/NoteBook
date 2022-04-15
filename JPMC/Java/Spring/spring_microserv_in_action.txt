@@ -237,6 +237,25 @@ Chapter 7 - Resiliency Patterns (Resilience4j)
 		* hystrix is in maintainance mode (no new features being worked on). we use Resilience4j instead. 
 		* AOP 
 
+Chapter 8 - Service Routing
+	- Problem: When we have many services in an app, it could be challenging to enforce 
+	one security standard across all services or track user across service calls.
+	We can have each service's developers handle the security and consistancy 
+	but if one forgets, the app could suffer. (cross-cutting concerns)
+
+	- Solution : abstract all this cross-cutting concerns into a service which will act as 
+	router for all the calls in the microservices. We call this gateway.
+		: single point of implementation allows microservice to have static routing (one URL),
+		dynamic routing (toward the many services), Authentication, metrics.
+		: But it could also be a bottleneck. Therefore use best practises (listed on book) 
+
+	- implementation : service clients make call to gateway and gateway route calls to services. 
+		this way, it acts as policy enforcement point (pep). In spring, the gateway that is recommeneded is 
+		Spring Cloud Gateway. It is , at hear, a reverse proxy. 
+		: the beauty of SCG is that we can delete or modify services without ever having to update the gateway.
+
+	- Spring Cloud Gateway has two mechanisms of forwarding request to services. Automated & Manual Mapping.  
+
 
 Reference:
 	- Testing
