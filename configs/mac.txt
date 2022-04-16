@@ -20,6 +20,11 @@ Mac
 		groups <user>	// list all groups user is part of
 	add user to sudo
 		https://zwbetz.com/add-your-account-as-a-sudoer-on-mac/
+	
+	docker 
+		open -a Docker 
+	mariadb
+		brew services start mariadb
 
 
 	Collapse all windows

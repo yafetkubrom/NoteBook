@@ -20,9 +20,11 @@
 - REFERENCE 
 	- https://docs.docker.com/engine/install/ubuntu/
 	
-	
-Stopped at https://docs.docker.com/get-started/04_sharing_app/
-and https://docs.docker.com/engine/examples/postgresql_service/
+installation
+	brew
+		brew cask install docker 	// brew extension for gui apps 
 
-cd 
-/home/yafetkubrom/Documents/Docker/Get_Started/ExampleRepo/getting-started/app
+
+
+		** https://www.cprime.com/resources/blog/docker-for-mac-with-homebrew-a-step-by-step-tutorial/
+
