@@ -25,28 +25,32 @@
 
 Installation
 	Options:
-	  1) download Linux into usb drive and access from usb
-	  2) download Linux into usb drive and install to hardware
-		- Partition?? (must create swap which is space in hard drive)
-		- efi?? boot loader??
-	  3) download Virtual box and create virtual environment to install Linux
+
+	cent OS 
+		installing desktop
+			yum -y groups install "GNOME Desktop"
+			startx
+			systemctl set-default graphical.target
+Users
+	- <definition>
+	- commands
+		list of Users					less /etc/passwd
+		list of groups					less /etc/group
+		groups a user belongs to 		groups <username>
+		members belonging to group		getent group <username>	
+		sudo usermod -a -G sudo <username>	// if no sudo, use wheel
 
 	Partition:
 	  - /dev/sda1 ntfs should be windows 
 	  	- Windows10 should be partitioned by itself(/dev/sda1 or 2
 	  - use the free space for ubuntu
 		- shrink windows but live space since window have big files
-	  - must create swap 
-		- + on free space and add about double of your memory for swap
+	- swap
 	  - Primary vs Logical partition
 		- Primary Partition holds OS files and you can boot from it. 
 			- max 4 primary can be created
 		- Logical partition holds files/images/videos. 
 	  - File Systems (fat32, ext4, swap,)???
-	  - Device for boot loader - if booting from efi, use that. 
-		if not, leave it at dev/sda. the window boot loader will be replaced by 
-		GRUP and it will give you option to choose between window and linux every 
-		time you power on. 
 
 bootable
 	- Grup is booting manager for Ubuntu.

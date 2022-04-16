@@ -1,0 +1,24 @@
+IaC - Inf. as Code.. use config files to provision an inf instead of using gui.
+tf - tool for IaC
+
+commands
+
+Deploy infrastructure w/ terraform:
+    * Scope - Identify the inf. for your project
+    * Author - write the config for your inf.
+    * Initialize - install the plugins tf needs
+    * Plan - preview the changes tf will make
+    * Apply - make the planned changes 
+
+Pedagogy
+    - What it terraform / quick tutorial
+    - install tf
+    - build inf -> change inf > destroy inf
+    - define input var 
+
+install tf (mac)
+    * brew tap hashicorp/tap
+    * brew install hashicorp/tap/terraform
+        * brew update && brew upgrade hashicorp/tap/terraform
+    * terraform -help OR terraform -help plan 
+    ** https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started
