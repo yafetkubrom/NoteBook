@@ -1,0 +1,51 @@
+A Cloud Guru
+
+IAM (Identity and Access Management)
+    * Create and manage entities access permissions.
+    * Centralized * Access * Permission * Identity Federation
+    * features
+        * multi*factor Authentiction
+        * temporary access 
+        * password policy (rotation)
+        * Integrated 
+        * Complience (PCI DSS)
+    * Objects
+        * Users * groups * roles * (policy - doc that define perm. for U, G, R)
+        * AWS access policy is written in JSON
+    * Testing 
+        * https://policysim.aws.amazon.com
+
+    **ToDo**    * Implement RSA SecurID using SSO SAML agent
+                * Understand roles 
+
+EC2 (Elastic Compute Cloud)
+    * Benefits
+        * Secure, resizable compute capacity in the cloud.
+        * Like VM but hosted in AWS 
+        * Makes web-based cloud computing easier && gives you full control.
+        * Solved the problem of on-prem infrastructure.
+    * Pricing
+        * On Demand 
+            * Flexible * Short term * Testing the water
+        * Reserved 
+            * Predictable usage * Pay Up-Front * 72% off on-demand * choose time frame
+        * Spot 
+            * Flexible (only) * Cost-Senstive (only) * Urgent Capacity * 90% discount
+        * Dedicated 
+            * Specific needs (Complience or Licensing restriction) * on-demand or reserved
+        ** Saving Plans && Price Calculator
+
+
+
+
+Exam Tips
+    IAM policy sim
+        * Test IAM permissions before you commit them to prod
+        * validate policy works
+        * great for troubleshooting. 
+    IAM
+        * IAM is universal not regional.
+        * New users have no permission when created.
+        * access keys and secret access keys given when user is created.
+            used for loggin in programmatically, not console. 
+        * roles give aws service access to act on your behalf. 

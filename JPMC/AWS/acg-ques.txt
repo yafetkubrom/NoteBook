@@ -1,0 +1,9 @@
+IAM
+    * What is IAM?
+    * What is IAM used for?
+    * What was used before IAM?
+    * What are some best practises?
+    * Show me quick demo.
+
+EC2
+    * What are shortcomings of using public cloud envirnment. 
