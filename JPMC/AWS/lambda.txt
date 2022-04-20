@@ -1,0 +1,39 @@
+Serverless Computing
+    - Serverless (application) are ones that don't require you to provision or manage any servers.
+    - Serverless Application w/ AWS
+        Compute - Lambda
+        API - API Gateway
+        Storage - S3
+        Database - DynamoDB
+        Interprocess Messageing - SQS
+        Orchestration - CloudWatch
+        Analytics - Kinesis
+
+
+AWS Lambda
+    - computer layer of your serverless application where your code is executed.
+    - deploy functions. triggered by events. also known as FaaS. lambda is serverless FaaS.
+    - FaaS is one approach to building event-driven computing systems. 
+    - Serverless FaaS is one appraoch to FaaS. 
+
+    - single lambda functions
+        code - what gets executed
+        configuration - how the code is executed
+        event sources - detect event and invoke function (API Gateway for HTTPS request, SNS for topic when posted)
+            - lambda also has RESTful API to run directly by calling the API without need for outside event sources.
+
+
+    * lambda functions are triggered based on event. They scale based on size of workload. therefore they dont incur charge
+    or computer power when not being used. 
+
+AWS Lambda (Coding)
+    Clean up
+        - delete function
+        - delete log group 
+        - delete execution role
+        * https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html
+
+Temp
+* https://d1.awsstatic.com/whitepapers/serverless-architectures-with-aws-lambda.pdf
+* https://github.com/aws-samples/aws-serverless-workshops
+* https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-images.html
