@@ -33,7 +33,6 @@ AWS Lambda (Coding)
         - delete execution role
         * https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html
 
-Temp
-* https://d1.awsstatic.com/whitepapers/serverless-architectures-with-aws-lambda.pdf
-* https://github.com/aws-samples/aws-serverless-workshops
-* https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-images.html
+Recommended learning path
+    - https://d1.awsstatic.com/whitepapers/serverless-architectures-with-aws-lambda.pdf
+    

@@ -31,5 +31,9 @@ SSH generation
 	pbcopy < ~/.ssh/id_ed25519.pub	// mac
 		linux > cat ~/.ssh/id_ed25519.pub
 
+github commands
+	gh repo create 	// create github to git repo 
+	
+
 reference 
 	https://www.atlassian.com/git/tutorials/what-is-version-control
