@@ -21,12 +21,6 @@ Ubuntu
 		- df -h		// to make sure it is unmounted
 
 
-Credentials
-	raspberry 2 - 
-		ubuntu password - Altoids2049
-
-
-
 1 - install heatsink 
 	- it keeps temperature down on cpu, memory and 
 
@@ -41,12 +35,6 @@ Project ideas:
 
 What's next?
 https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/6
-
-Ip 
-192.168.1.87
-
-Password
-Trico2020!
 
 Apache
 	- Apache is a popular web server application you can install on the Raspberry Pi to allow it to serve web pages.
