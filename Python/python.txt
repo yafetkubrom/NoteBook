@@ -26,6 +26,10 @@ virtual envirnment
     - best practises
         - create .venv folder and create all venv directories inside. 
     - https://docs.python.org/3/tutorial/venv.html
+    - commands
+        python -m venv <env_name>
+        source <env_name>/bin/activate
+        deactivate
 
 
 pip (question)
