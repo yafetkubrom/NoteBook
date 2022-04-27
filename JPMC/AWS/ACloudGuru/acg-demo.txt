@@ -1,0 +1,7 @@
+EC2
+    start new ec2 instance & notice the options
+    ssh into it 
+    yum install httpd
+    systemctl start httpd
+    add index.html to /var/www/html/
+    view from browser

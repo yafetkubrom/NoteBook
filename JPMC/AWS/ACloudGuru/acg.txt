@@ -34,6 +34,29 @@ EC2 (Elastic Compute Cloud)
         * Dedicated 
             * Specific needs (Complience or Licensing restriction) * on-demand or reserved
         ** Saving Plans && Price Calculator
+    * Types
+        ** Hardware (cpu, memory, storage)
+        ** Capabilities (grouped into families)
+    * EBS
+        ** gp2 - general purpose (ssd) > 16000 IOPS 
+            *** gp3 (latest) > 20% cheaper
+        ** io1 - provisioned (ssd) > 64000 IOPS
+            *** io2 (latest) > same price as io1 but higher durability & higher iops per gib.
+        ** io2 block express (ssd) > 256000 IOPS and durability
+            data intenstive apps like oracle
+        ** st1 (hhd) > upto 500 MB/s per volume
+            *** for mountains of data , frequently accessed (ex. big data)
+            *** cant be boot volume 
+        ** sc1 (hdd) > cheapest, upto 250 MB/s per volume.
+            *** performace not factory and scan few per day. 
+        ** IOPS vs Throughput
+            *** IOPS measure number of r/w operation per second
+            *** Throughput measure number of bits r/w per second
+            *** IOPS for quick tranaction while Throughput for big data 
+        ** https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html
+    * Route 53
+    * RDS 
+    * System Manager Parameter Store 
 
 
 
@@ -49,3 +72,9 @@ Exam Tips
         * access keys and secret access keys given when user is created.
             used for loggin in programmatically, not console. 
         * roles give aws service access to act on your behalf. 
+    EBS 
+        * gp2 and gp3 for < 16000 IOPS
+        * io1 and io2 for > 16000 IOPS (io2 more iops per gib)
+        * io2 block express > 256000
+        ** HDD 
+        * st1 amd sc1 (cheapest and lowest performance)
