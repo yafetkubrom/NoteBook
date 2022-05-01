@@ -3,6 +3,7 @@ Serverless Computing
     - Serverless Application w/ AWS
         Compute - Lambda
         API - API Gateway
+		- https://aws.amazon.com/api-gateway/resources/
         Storage - S3
         Database - DynamoDB
         Interprocess Messageing - SQS
