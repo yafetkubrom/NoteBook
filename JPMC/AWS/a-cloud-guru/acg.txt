@@ -54,6 +54,21 @@ EC2 (Elastic Compute Cloud)
             *** Throughput measure number of bits r/w per second
             *** IOPS for quick tranaction while Throughput for big data 
         ** https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html
+    * Elastic LB
+        ** Application Load Balancer 
+        ** Network Load Balancer
+        ** Gateway Load Balancer 
+        ** Classic Load Balancer (legacy)
+            *** HTTP/HTTPs & web server is best handled by ALB
+            *** High performamce load balancing by NLB
+            *** legacy option. http & tcp by CLB
+            *** for 3rd-party virtual applicances handled by GLB
+            *** X-Forwarded-For - header option for IPv4 address of end user coming thru LB.
+    * Roles 
+        ** Roles is the preferred option to allow ec2 access to other services.
+            *** policies control a role's permissions.
+    * AWS CLI 
+        ** S3 > https://docs.aws.amazon.com/cli/latest/reference/s3/
     * Route 53
     * RDS 
     * System Manager Parameter Store 
