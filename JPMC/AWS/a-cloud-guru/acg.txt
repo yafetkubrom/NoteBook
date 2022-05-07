@@ -70,8 +70,21 @@ EC2 (Elastic Compute Cloud)
     * AWS CLI 
         ** S3 > https://docs.aws.amazon.com/cli/latest/reference/s3/
     * Route 53
+        ** Amazon's DNS service.
     * RDS 
+        ** Relational Database (sql server, mysql, mariadb, oracle, postgres, aurora)
+        ** Good for OLTP
+        ** OLTP = process data from tranaction in real-time. 
+        ** OLAP = process complex queries to analyze histrocial data.
+        ** Multi-AZ = copy of your DB in another AZ. (on Standby. automatically switch if origional is down)
+        ** read-replica = read-only copy of your primary DB. 
+        ** Two ways to backup: DB Snapshot (manual) & Automated backup. 
+    * ElastiCache 
+        ** Store frequently quered data in memory.
+        ** two types. memcached & redis. 
+        ** Typical scenerio. read-heavy DB & data not changed frequently.
     * System Manager Parameter Store 
+        
 
 
 
