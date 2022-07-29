@@ -72,8 +72,6 @@ EC2 (Elastic Compute Cloud)
     * Route 53
         ** Amazon's DNS service.
     * RDS 
-<<<<<<< HEAD
-<<<<<<< HEAD
         ** Relational Database (sql server, mysql, mariadb, oracle, postgres, aurora)
         ** Good for OLTP
         ** OLTP = process data from tranaction in real-time. 
@@ -85,16 +83,12 @@ EC2 (Elastic Compute Cloud)
         ** Store frequently quered data in memory.
         ** two types. memcached & redis. 
         ** Typical scenerio. read-heavy DB & data not changed frequently.
-=======
         ** Multi-AZ
             *** is for DR(Disaster Recovery), not improving performace. Cant connect to standby when primary DB is active.
             *** to improve performance, increase read replica. Read Replica is read-only copy of primary DB.
->>>>>>> 66145cb (modified aws course notes)
-=======
         ** Multi-AZ
             *** is for DR(Disaster Recovery), not improving performace. Cant connect to standby when primary DB is active.
             *** to improve performance, increase read replica. Read Replica is read-only copy of primary DB.
->>>>>>> 66145cb (modified aws course notes)
     * System Manager Parameter Store 
         
 
